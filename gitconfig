@@ -1,0 +1,13 @@
+[user]
+  name = Dominic Giglio
+  email = humanshell@gmail.com
+
+[color]
+  status = auto
+  branch = auto
+  ui = auto
+  diff = auto
+  
+[core]
+  pager = less -R
+  editor = vim

@@ -1,0 +1,6 @@
+# set the default path to rvm in user's home folder
+export rvm_path="$HOME/.rvm"
+
+# change to the default gemset when leaving a directory
+# that uses a project level .rvmrc file
+export rvm_project_rvmrc_default=1
