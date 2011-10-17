@@ -13,3 +13,6 @@
 [submodule "vim/bundle/project"]
 	path = vim/bundle/project
 	url = https://github.com/shemerey/vim-project.git
+[submodule "vim/bundle/genutils"]
+	path = vim/bundle/genutils
+	url = https://github.com/clones/vim-genutils.git
