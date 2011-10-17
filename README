@@ -16,7 +16,7 @@ Install:
 There is a simple install.sh script which will create the appropriate links in your $HOME based on your OS.
 
 cd ~
-git clone https://github.com/humanshell/dotfiles .dotfiles
+git clone git://github.com/humanshell/dotfiles.git .dotfiles
 .dotfiles/install.sh
 
 
