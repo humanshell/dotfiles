@@ -16,3 +16,6 @@
 [submodule "vim/bundle/genutils"]
 	path = vim/bundle/genutils
 	url = https://github.com/clones/vim-genutils.git
+[submodule "vim/bundle/multvals"]
+	path = vim/bundle/multvals
+	url = https://github.com/clones/vim-multvals.git
