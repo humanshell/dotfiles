@@ -4,3 +4,6 @@
 [submodule "vim/bundles/rails"]
 	path = vim/bundles/rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundles/snipmate"]
+	path = vim/bundles/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
