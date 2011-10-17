@@ -10,9 +10,10 @@ ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
 ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/vim/ $HOME/.vim
 ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
+ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 
 # create soft link to bash_config
-if [ $OS == "Darwin" ]
+if [ $OS == "Darwin" ]; then
   ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
 else
   ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
