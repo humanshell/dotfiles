@@ -8,8 +8,11 @@ OS=$(uname)
 # create soft link to rvm config
 ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
 
-# create soft links to vim config files
-ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
+# create soft link to vim config files
+ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
+
+# create soft link to htop config
+ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 
 # create soft link to bash config
 if [ $OS == "Darwin" ]
