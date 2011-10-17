@@ -13,8 +13,8 @@ ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
 
 # create soft link to bash config
 if [ $OS == "Darwin" ]
-  ln -s $HOME/.dotfiles/bash_profile $HOME/.bash_profile
+  ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
 else
-  ln -s $HOME/.dotfiles/bash_profile $HOME/.bashrc
+  ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
 
