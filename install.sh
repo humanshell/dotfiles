@@ -5,16 +5,13 @@
 # setup script variables
 OS=$(uname)
 
-# create soft link to rvm config
+# create soft links to config files and directories
 ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
-
-# create soft link to vim config files
 ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
-
-# create soft link to htop config
+ln -s $HOME/.dotfiles/vim/ $HOME/.vim
 ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 
-# create soft link to bash config
+# create soft link to bash_config
 if [ $OS == "Darwin" ]
   ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
 else
