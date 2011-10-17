@@ -10,8 +10,6 @@ call pathogen#helptags()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set nobackup
-set nowritebackup
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -189,4 +187,10 @@ function! OpenURL()
   endif
 endfunction
 map <Leader>w :call OpenURL()<CR>
+
+" Backups & Files
+set backup                   " Enable creation of backup file.
+set backupdir=~/.vim/backups " Where backups will go.
+set directory=~/.vim/tmp     " Where temporary files will go.
+
 
