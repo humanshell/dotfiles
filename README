@@ -1,0 +1,22 @@
+Intro:
+
+This is my dotfiles repo. I've created it to help me use the same configs across multiple systems.
+It is nowhere near as advanced as some others, it is really more of a convenience for me.
+
+If you'd like to really see how this is done, check these repos:
+
+https://github.com/grosser/dotfiles
+https://github.com/nel/dotfiles
+https://github.com/ryanb/dotfiles
+https://github.com/aviflombaum/dotfiles
+https://github.com/drnic/.dotfiles
+
+Install:
+
+There is a simple install.sh script which will create the appropriate links in your $HOME based on your OS.
+
+cd ~
+git clone https://github.com/humanshell/dotfiles .dotfiles
+.dotfiles/install.sh
+
+
