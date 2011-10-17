@@ -19,3 +19,6 @@
 [submodule "vim/bundle/multvals"]
 	path = vim/bundle/multvals
 	url = https://github.com/clones/vim-multvals.git
+[submodule "vim/bundle/dbext"]
+	path = vim/bundle/dbext
+	url = https://github.com/vim-scripts/dbext.vim.git
