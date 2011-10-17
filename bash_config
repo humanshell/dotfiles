@@ -1,3 +1,6 @@
+# grab the current OS
+OS=$(uname)
+
 # Set personal path environment variables
 export PATH=$PATH:.:~/Dropbox/bin
 
