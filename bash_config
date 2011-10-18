@@ -8,7 +8,7 @@ export PATH=$PATH:.:~/Dropbox/bin
 CC=gcc-4.2
 [[ -s "/Users/humanshell/.rvm/scripts/rvm" ]] && source "/Users/humanshell/.rvm/scripts/rvm"
 
-# Add TextMate as the default editor
+# Add Vim as the default editor
 export EDITOR=vim
 export CVSEDITOR=vim
 export SVN_EDITOR=vim
@@ -62,6 +62,11 @@ alias gstat="git status"
 alias gpush="git push origin master"
 alias gpull="git pull origin master"
 alias gdiff="git diff"
+
+# if we're on OSX with MacVim installed then alias the system vim to MacVim's Vim
+if [[ $OS == "Darwin" && -d "/Applications/MacVim.app" ]]; then
+  alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+fi
 
 # This adds color to man pages
 export PAGER="more"
