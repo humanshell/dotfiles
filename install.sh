@@ -5,10 +5,8 @@
 # setup script variables
 OS=$(uname)
 
-# create soft links to config files and directories
+# create soft links to config files
 ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
-ln -s $HOME/.dotfiles/vim/vimrc $HOME/.vimrc
-ln -s $HOME/.dotfiles/vim/ $HOME/.vim
 ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 
@@ -18,4 +16,11 @@ if [ $OS == "Darwin" ]; then
 else
   ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
+
+# install krisleech / vimfiles github repo
+# https://github.com/krisleech/vimfiles
+curl https://raw.github.com/krisleech/vimfiles/master/bootstrap.sh -o - | sh
+
+# create the local vimrc overrides file
+echo "set background=dark" > ~/.vimrc.local
 
