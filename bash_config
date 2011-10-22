@@ -2,7 +2,7 @@
 OS=$(uname)
 
 # Set personal path environment variables
-export PATH=$PATH:.:~/Dropbox/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:.:$HOME/Dropbox/bin
 
 # load RVM
 CC=gcc-4.2
@@ -62,11 +62,6 @@ alias gstat="git status"
 alias gpush="git push origin master"
 alias gpull="git pull origin master"
 alias gdiff="git diff"
-
-# if we're on OSX with MacVim installed then alias the system vim to MacVim's Vim
-if [[ $OS == "Darwin" && -d "/Applications/MacVim.app" ]]; then
-  alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-fi
 
 # This adds color to man pages
 export PAGER="more"
