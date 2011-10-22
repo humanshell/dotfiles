@@ -23,4 +23,6 @@ curl https://raw.github.com/krisleech/vimfiles/master/bootstrap.sh -o - | sh
 
 # create the local vimrc overrides file
 echo "set background=dark" > ~/.vimrc.local
+echo "set norelativenumber" > ~/.vimrc.local
+echo "set number" > ~/.vimrc.local
 
