@@ -20,7 +20,7 @@ fi
 
 # install krisleech / vimfiles github repo
 # https://github.com/krisleech/vimfiles
-curl https://raw.github.com/krisleech/vimfiles/master/bootstrap.sh -o - | sh
+curl https://raw.github.com/humanshell/vimfiles/master/bootstrap.sh -o - | sh
 
 # create the local vimrc overrides file
 echo "set background=dark" > ~/.vimrc.local
