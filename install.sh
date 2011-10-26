@@ -18,8 +18,9 @@ else
   ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
 
-# install krisleech / vimfiles github repo
+# install humanshell fork of krisleech/vimfiles github repo
 # https://github.com/krisleech/vimfiles
+# https://github.com/humanshell/vimfiles
 curl https://raw.github.com/humanshell/vimfiles/master/bootstrap.sh -o - | sh
 
 # create the local vimrc overrides file
