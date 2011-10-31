@@ -49,13 +49,21 @@ PS1="\n${BYellow}[${txtrst} \h-${BGreen}\u${txtrst} \w\$(__git_ps1) ${BYellow}]$
 
 # Aliases to make the CLI a little easier to handle
 alias cs="clear"
-alias ls="ls -hG"
-alias ll="ls -hlG"
-alias la="ls -hlaG"
 alias grep="grep --color=auto"
 alias df="df -h"
 alias du="du -shc"
 alias top="htop"
+alias apt="sudo apt-get"
+
+if [ $OS == "Darwin" ]; then
+  alias ls="ls -hG"
+  alias ll="ls -hlG"
+  alias la="ls -hlaG"
+else
+  alias ls="ls -h --color=always --group-directories-first"
+  alias ll="ls -hl --color=always --group-directories-first"
+  alias la="ls -hla --color=always --group-directories-first"
+fi
 
 # Aliases for git
 alias gstat="git status"
