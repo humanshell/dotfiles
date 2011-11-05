@@ -11,3 +11,6 @@
 [core]
   pager = less -R
   editor = vim
+  autocrlf = input
+  safecrlf = true
+
