@@ -11,8 +11,8 @@
 [core]
   pager = less -R
   editor = vim
-  autocrlf = input
-  safecrlf = true
+  # autocrlf = input
+  # safecrlf = true
 
 [alias]
   co = checkout
