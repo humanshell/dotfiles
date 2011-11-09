@@ -6,7 +6,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local
 
 # load RVM
 CC=gcc-4.2
-[[ -s "/Users/humanshell/.rvm/scripts/rvm" ]] && source "/Users/humanshell/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Add Vim as the default editor
 export EDITOR=vim
