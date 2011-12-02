@@ -23,6 +23,15 @@ else
   ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
 
+# grab pathogen.vim from github so submodule plugins work
+if [ $OS == "Darwin" ]; then
+  curl -so ~/.dotfiles/vim/autoload/pathogen.vim \
+        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+else
+  wget -O - ~/.dotfiles/vim/autoload/pathogen.vim \
+        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
+fi
+
 # initialize and update submodules
 $GIT submodule init && $GIT submodule update
 
