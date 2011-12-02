@@ -13,6 +13,7 @@ ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
 ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
+ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
 
 # create soft link to bash_config
 if [ $OS == "Darwin" ]; then
