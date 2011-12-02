@@ -14,6 +14,7 @@ ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
 ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
+ln -s $HOME/.dotfiles/vim $HOME/.vim
 
 # create soft link to bash_config
 if [ $OS == "Darwin" ]; then
