@@ -17,6 +17,7 @@ There is a simple install.sh script which will create the appropriate links in y
 
 cd ~
 git clone git://github.com/humanshell/dotfiles.git .dotfiles
-.dotfiles/install.sh
+cd .dotfiles
+./install.sh
 
 
