@@ -42,8 +42,10 @@ set expandtab
 set nowrap
 set textwidth=79
 set formatoptions=n
-set colorcolumn=80
 set t_Co=256
+if exists("+colorcolumn")
+  set colorcolumn=80
+endif
 
 " window height setup
 set winheight=999
