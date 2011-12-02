@@ -22,3 +22,9 @@
 [submodule "vim/bundle/vim-autoclose"]
 	path = vim/bundle/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "vim/bundle/autocorrect"]
+	path = vim/bundle/autocorrect
+	url = https://github.com/vim-scripts/autocorrect.vim.git
+[submodule "vim-autocorrect"]
+	path = vim-autocorrect
+	url = https://github.com/panozzaj/vim-autocorrect.git

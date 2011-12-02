@@ -148,6 +148,12 @@ if has("gui_running")
 endif
 set guifont=Monaco:h12
 
+let my_home = expand("$HOME/")
+
+if filereadable(my_home . '.vim/bundle/vim-autocorrect/autocorrect.vim')
+  source ~/.vim/bundle/vim-autocorrect/autocorrect.vim
+endif
+
 " When vimrc is edited, automatically reload it
 autocmd! bufwritepost $MYVIMRC source %
 
