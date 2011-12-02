@@ -20,9 +20,12 @@ set autoread
 " ui setup
 set encoding=utf-8
 set cursorline
+set scrolloff=3
 set number
 set autoindent
 set smartindent
+set showmode
+set hidden
 set wildmenu
 set wildmode=list:longest
 set ttyfast
@@ -50,12 +53,12 @@ endif
 " window height setup
 set winheight=999
 set previewheight=50
-"au BufEnter ?* call PreviewHeightWorkAround()
-"func PreviewHeightWorkAround()
-"  if &previewwindow
-"    exec 'setlocal winheight='.&previewheight
-"  endif
-"endfunc
+au! BufEnter ?* call PreviewHeightWorkAround()
+func PreviewHeightWorkAround()
+  if &previewwindow
+    exec 'setlocal winheight='.&previewheight
+  endif
+endfunc
 
 " moving and searching setup
 set ignorecase
@@ -102,6 +105,10 @@ nmap <leader>D :bufdo bd<CR>
 " switch between last two buffers
 nnoremap <leader><leader> <c-^>
 
+" Saving and exit
+nmap <leader>q :q<CR>
+nmap <leader>w :w<CR>
+
 " nerdtree setup
 let NERDTreeShowBookmarks = 0
 let NERDChristmasTree = 1
@@ -143,9 +150,6 @@ set guifont=Monaco:h12
 
 " When vimrc is edited, automatically reload it
 autocmd! bufwritepost $MYVIMRC source %
-
-
-
 
 
 
