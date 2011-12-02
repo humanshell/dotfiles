@@ -24,11 +24,12 @@ else
 fi
 
 # grab pathogen.vim from github so submodule plugins work
+mkdir ~/.dotfiles/vim/autoload
 if [ $OS == "Darwin" ]; then
   curl -so ~/.dotfiles/vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 else
-  wget -O - ~/.dotfiles/vim/autoload/pathogen.vim \
+  wget -O ~/.dotfiles/vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 fi
 
