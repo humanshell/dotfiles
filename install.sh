@@ -1,9 +1,12 @@
 #!/bin/bash
 #
-# install.sh - this script installs and sets up links to the dotfiles in the user's home directory
+# install.sh
+# - this script installs and sets up links to the dotfiles in the user's
+# home directory and sets up the vim git submodule plugins
 
 # setup script variables
 OS=$(uname)
+GIT=$(which git)
 
 # create soft links to config files
 ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
@@ -18,13 +21,6 @@ else
   ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
 
-# install humanshell fork of krisleech/vimfiles github repo
-# https://github.com/krisleech/vimfiles
-# https://github.com/humanshell/vimfiles
-#curl https://raw.github.com/humanshell/vimfiles/master/bootstrap.sh -o - | sh
-
-# create the local vimrc overrides file
-#echo "set background=dark" > ~/.vimrc.local
-#echo "set norelativenumber" >> ~/.vimrc.local
-#echo "set number" >> ~/.vimrc.local
+# initialize and update submodules
+$GIT submodule init && $GIT submodule update
 

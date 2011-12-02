@@ -1,0 +1,150 @@
+" use vim features not vi
+set nocompatible
+
+" manage bundles with pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
+
+" general setup
+filetype plugin indent on     
+let mapleader = ","
+let g:mapleader = ","
+set modelines=0
+set history=1000
+set nobackup
+set nowritebackup
+set noswapfile
+syntax enable
+set autoread
+
+" ui setup
+set encoding=utf-8
+set cursorline
+set number
+set autoindent
+set smartindent
+set wildmenu
+set wildmode=list:longest
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+
+" status line setup
+set statusline=%F%m%r%h%w[%L]%y[%p%%][%04v][%{fugitive#statusline()}]
+set statusline+=%{rvm#statusline()} 
+
+" text and formatting setup
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set nowrap
+set textwidth=79
+set formatoptions=n
+set colorcolumn=80
+set t_Co=256
+
+" window height setup
+set winheight=999
+set previewheight=50
+"au BufEnter ?* call PreviewHeightWorkAround()
+"func PreviewHeightWorkAround()
+"  if &previewwindow
+"    exec 'setlocal winheight='.&previewheight
+"  endif
+"endfunc
+
+" moving and searching setup
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+" turn search highlight off
+nnoremap <leader><space> :noh<cr>
+" search (forwards)
+nmap <space> /
+" search (backwards)
+map <c-space> ?
+" Center screen when scrolling search results
+nmap n nzz
+nmap N Nzz
+" leave ins and move to begining/end of line
+imap <C-h> <ESC>^
+imap <C-l> <ESC>$
+" map ESC
+imap jj <ESC>
+" turn off arrow keys
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>"
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+" move lines up and down
+map <C-J> :m +1 <CR>
+map <C-K> :m -2 <CR>
+" switch between buffers
+noremap <tab> :bn<CR>
+noremap <S-tab> :bp<CR>
+" close buffer
+nmap <leader>d :bd<CR>
+" close all buffers
+nmap <leader>D :bufdo bd<CR>
+" switch between last two buffers
+nnoremap <leader><leader> <c-^>
+
+" nerdtree setup
+let NERDTreeShowBookmarks = 0
+let NERDChristmasTree = 1
+let NERDTreeWinPos = "left"
+let NERDTreeHijackNetrw = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeWinSize = 50 
+" open file browser
+map <leader>p :NERDTreeToggle<cr>
+
+" autoClose
+let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
+let g:AutoCloseProtectedRegions = ["Character"]
+
+" ruby/rails
+map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
+map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
+map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
+map <Leader>m :Rmodel 
+map <Leader>v :Rview 
+
+" gui setup
+if has("gui_running")
+  set guioptions-=T " no toolbar set guioptions-=m " no menus
+  set guioptions-=r " no scrollbar on the right
+  set guioptions-=R " no scrollbar on the right
+  set guioptions-=l " no scrollbar on the left
+  set guioptions-=b " no scrollbar on the bottom
+  set guioptions=aiA 
+  set mouse=v
+  set guifont=Monaco:h12 "<- Maybe a good idea when using mac
+endif
+set guifont=Monaco:h12
+
+" When vimrc is edited, automatically reload it
+autocmd! bufwritepost $MYVIMRC source %
+
+
+
+
+
+
+
