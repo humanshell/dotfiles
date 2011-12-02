@@ -11,6 +11,7 @@
 [core]
   pager = less -R
   editor = vim
+	excludesfile = ~/.dotfiles/globalignore
   # autocrlf = input
   # safecrlf = true
 
