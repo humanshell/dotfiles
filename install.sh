@@ -21,10 +21,10 @@ fi
 # install humanshell fork of krisleech/vimfiles github repo
 # https://github.com/krisleech/vimfiles
 # https://github.com/humanshell/vimfiles
-curl https://raw.github.com/humanshell/vimfiles/master/bootstrap.sh -o - | sh
+#curl https://raw.github.com/humanshell/vimfiles/master/bootstrap.sh -o - | sh
 
 # create the local vimrc overrides file
-echo "set background=dark" > ~/.vimrc.local
-echo "set norelativenumber" >> ~/.vimrc.local
-echo "set number" >> ~/.vimrc.local
+#echo "set background=dark" > ~/.vimrc.local
+#echo "set norelativenumber" >> ~/.vimrc.local
+#echo "set number" >> ~/.vimrc.local
 
