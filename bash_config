@@ -34,9 +34,9 @@ BPurple='\e[1;35m'      # Purple
 BCyan='\e[1;36m'        # Cyan
 BWhite='\e[1;37m'       # White
 
-# Setup a nice prompt (with git branch)
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  . /usr/local/git/contrib/completion/git-completion.bash
+# Enable use of git in the shell environment/prompt
+if [ -f $(locate git-completion) ]; then
+  . $(locate git-completion)
 fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
