@@ -29,7 +29,7 @@ if [ $OS == "Darwin" ]; then
   curl -so ~/.dotfiles/vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 else
-  wget -O ~/.dotfiles/vim/autoload/pathogen.vim \
+  wget --no-check-certificate -O ~/.dotfiles/vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 fi
 
