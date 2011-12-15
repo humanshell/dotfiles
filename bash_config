@@ -2,7 +2,7 @@
 OS=$(uname)
 
 # Set personal path environment variables
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:.:$HOME/Dropbox/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$HOME/Dropbox/bin:.
 
 # load RVM
 CC=gcc-4.2
