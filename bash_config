@@ -49,6 +49,7 @@ PS1="\n${BYellow}[${txtrst} \h-${BGreen}\u${txtrst} \w\$(__git_ps1) ${BYellow}]$
 
 # Aliases to make the CLI a little easier to handle
 alias cs="clear"
+alias cdcs="cd ~ && clear"
 alias grep="grep --color=auto"
 alias df="df -h"
 alias du="du -shc"
