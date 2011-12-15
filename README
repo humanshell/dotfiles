@@ -3,6 +3,10 @@ Intro:
 This is my dotfiles repo. I've created it to help me use the same configs across multiple systems.
 It is nowhere near as advanced as some others, it is really more of a convenience for me.
 
+The vim portion of my dotfiles setup is basically a manual fork of the vimfiles setup created by Kris Leech:
+
+https://github.com/krisleech/vimfiles
+
 If you'd like to really see how this is done, check these repos:
 
 https://github.com/grosser/dotfiles
