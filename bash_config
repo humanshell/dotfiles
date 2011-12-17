@@ -35,11 +35,16 @@ BCyan='\e[1;36m'        # Cyan
 BWhite='\e[1;37m'       # White
 
 # Enable use of git in the shell environment/prompt
-if [ -f $(locate git-completion) ]; then
-  . $(locate git-completion)
+if [ -f /usr/local/Cellar/git/1.7.8/etc/bash_completion.d/git-completion.bash ]; then
+  . /usr/local/Cellar/git/1.7.8/etc/bash_completion.d/git-completion.bash
+  GIT_PS1_SHOWDIRTYSTATE=true
+elif [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  . /usr/local/etc/bash_completion.d/git-completion.bash
+  GIT_PS1_SHOWDIRTYSTATE=true
+elif [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+  . /usr/local/git/contrib/completion/git-completion.bash
+  GIT_PS1_SHOWDIRTYSTATE=true
 fi
-
-GIT_PS1_SHOWDIRTYSTATE=true
 
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
