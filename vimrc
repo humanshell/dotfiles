@@ -16,6 +16,7 @@ set nowritebackup
 set noswapfile
 syntax enable
 set autoread
+set showcmd
 
 " ui setup
 set encoding=utf-8
