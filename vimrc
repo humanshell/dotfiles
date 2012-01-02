@@ -7,6 +7,7 @@ call pathogen#helptags()
 
 " general setup
 filetype plugin indent on     
+syntax enable
 let mapleader = ","
 let g:mapleader = ","
 set modelines=0
@@ -14,7 +15,6 @@ set history=1000
 set nobackup
 set nowritebackup
 set noswapfile
-syntax enable
 set autoread
 set showcmd
 
@@ -35,8 +35,23 @@ set backspace=indent,eol,start
 set laststatus=2
 
 " status line setup
-set statusline=%F%m%r%h%w[%L]%y[%p%%][%04v][%{fugitive#statusline()}]
-set statusline+=%{rvm#statusline()} 
+" path
+set statusline=%f
+" flags
+set statusline+=%m%r%h%w
+" git branch
+set statusline+=\ %{fugitive#statusline()}
+" encoding
+set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
+" rvm
+set statusline+=\ %{rvm#statusline()}
+" line x of y
+set statusline+=\ [line\ %l\/%L\ %p%%]
+" Color
+hi StatusLine ctermfg=Black ctermbg=White
+" Change color of status line in insert mode
+au InsertEnter * hi StatusLine ctermbg=DarkBlue
+au InsertLeave * hi StatusLine ctermfg=Black ctermbg=White
 
 " text and formatting setup
 set tabstop=2
