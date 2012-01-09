@@ -66,6 +66,9 @@ if exists("+colorcolumn")
   set colorcolumn=80
 endif
 
+" bind control-l to hash rocket
+imap <C-l> <Space>=><Space>
+
 " window height setup
 set winheight=999
 set previewheight=50
@@ -92,9 +95,6 @@ map <c-space> ?
 " Center screen when scrolling search results
 nmap n nzz
 nmap N Nzz
-" leave ins and move to begining/end of line
-imap <C-h> <ESC>^
-imap <C-l> <ESC>$
 " map ESC
 imap jj <ESC>
 " turn off arrow keys
