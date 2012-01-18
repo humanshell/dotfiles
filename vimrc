@@ -125,6 +125,14 @@ nnoremap <leader><leader> <c-^>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 
+" find file with command-t
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+
+" find file in current directory with command-t
+map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+
+let g:CommandTMaxHeight = 20
+
 " nerdtree setup
 let NERDTreeShowBookmarks = 0
 let NERDChristmasTree = 1
