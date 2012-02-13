@@ -44,6 +44,9 @@ elif [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 elif [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
   GIT_PS1_SHOWDIRTYSTATE=true
+elif [ -f  /usr/local/share/git-core/contrib/completion/git-completion.bash ]; then
+  . /usr/local/share/git-core/contrib/completion/git-completion.bash
+  GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
 if [ -f /opt/local/etc/bash_completion ]; then
@@ -62,7 +65,7 @@ alias du="du -shc"
 alias top="htop"
 alias apt="sudo apt-get"
 
-if [ $OS == "Darwin" ]; then
+if [ $OS == "Darwin" -o $OS == "FreeBSD" ]; then
   alias ls="ls -hG"
   alias ll="ls -hlG"
   alias la="ls -hlaG"
