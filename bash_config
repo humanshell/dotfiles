@@ -1,8 +1,13 @@
 # grab the current OS
 OS=$(uname)
 
-# Set personal path environment variables
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:$HOME/Dropbox/bin:.
+# Add the current folder to path
+export PATH=$PATH:.
+
+# Add OSX specific directories to PATH
+if [ $OS == "Darwin" ]; then
+  export PATH=$PATH:$HOME/Dropbox/bin:/Applications/MAMP/Library/bin
+fi
 
 # load RVM
 CC=gcc-4.2
