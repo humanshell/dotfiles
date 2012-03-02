@@ -13,6 +13,9 @@ fi
 CC=gcc-4.2
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
+
 # Add Vim as the default editor
 export EDITOR=vim
 export CVSEDITOR=vim
