@@ -13,6 +13,7 @@ ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
 ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
+ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
 ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/vim $HOME/.vim
 

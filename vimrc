@@ -97,6 +97,10 @@ nmap n nzz
 nmap N Nzz
 " map ESC
 imap jj <ESC>
+" ACK
+set grepprg=ack
+" ,a to Ack (search in files)
+nnoremap <leader>a :Ack
 " turn off arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
