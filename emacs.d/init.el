@@ -118,6 +118,10 @@ line instead."
 (global-set-key (kbd "C-c E") ;; .emacs
   (lambda()(interactive)(find-file "~/.emacs.d/init.el")))
 
+;; use windmove package to navigate open buffer panes
+(require 'windmove)
+(windmove-default-keybindings 'meta)
+
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -150,7 +154,7 @@ line instead."
 ;;
 ;; quickly show/hide linenumbers by pressing C-F5
 (autoload 'linum-mode "linum" "toggle line numbers on/off" t) 
-(global-set-key (kbd "C-n") 'linum-mode)
+(global-set-key (kbd "<f5>") 'linum-mode)
 
 ;; enable line numbers in specific modes automatically
 (add-hook 'c-mode-hook
