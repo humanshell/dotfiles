@@ -133,9 +133,10 @@ line instead."
 ;; spell check
 (setq ispell-program-name "aspell"
   ispell-extra-args '("--sug-mode=ultra"))
+(global-set-key (kbd "<f12>") 'flyspell-mode)
 
 ;; edit emacs init config file
-(global-set-key (kbd "C-c E") ;; .emacs
+(global-set-key (kbd "C-c E") ;; .emacs.d/init.el
   (lambda()(interactive)(find-file "~/.emacs.d/init.el")))
 
 ;; use windmove package to navigate open buffer panes
