@@ -210,3 +210,7 @@ line instead."
   tramp-default-method "ssh"
   tramp-persistency-file-name "~/.emacs.d/cache/tramp")
 
+;; enable autopair
+(require 'autopair)
+(autopair-global-mode 1)
+(setq autopair-autowrap t)
