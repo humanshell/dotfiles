@@ -152,3 +152,10 @@ line instead."
 (add-hook 'c-mode-hook
   (lambda() (linum-mode 1)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Packages
+;;
+;; enable dtrt-indent
+(require 'dtrt-indent)
+(dtrt-indent-mode 1)
+
