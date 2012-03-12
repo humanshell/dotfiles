@@ -52,3 +52,6 @@
 [submodule "emacs.d/packages/dtrt-indent"]
 	path = emacs.d/packages/dtrt-indent
 	url = git://github.com/emacsmirror/dtrt-indent.git
+[submodule "emacs.d/packages/autopair"]
+	path = emacs.d/packages/autopair
+	url = git://github.com/emacsmirror/autopair.git
