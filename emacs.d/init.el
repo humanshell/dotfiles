@@ -34,7 +34,7 @@
 (setq cua-enable-cua-keys nil)           ;; only for rectangles
 (cua-mode t)
 
-(setq ;; scrolling
+(setq                                    ;; scrolling
   scroll-margin 0                        ;; do smooth scrolling, ...
   scroll-conservatively 100000           ;; ... the defaults ...
   scroll-up-aggressively 0               ;; ... are very ...
@@ -74,6 +74,10 @@
   inhibit-startup-echo-area-message t)   ;; ... startup messages
 (setq require-final-newline t)           ;; end files with a newline
 
+;; http://www.emacswiki.org/cgi-bin/wiki/ShowParenMode
+(when (fboundp 'show-paren-mode)
+  (show-paren-mode t)
+  (setq show-paren-style 'parenthesis))
 
 ;; slick-copy: make copy-past a bit more intelligent
 ;; from: http://www.emacswiki.org/emacs/SlickCopy
@@ -94,7 +98,6 @@ line instead."
       (list (line-beginning-position)
         (line-beginning-position 2)))))
 
-
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -109,9 +112,9 @@ line instead."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; the modeline
 ;; 
-(line-number-mode t)                     ;; show line numbers
-(column-number-mode t)                   ;; show column numbers
-(size-indication-mode t)                 ;; show file size (emacs 22+)
+(line-number-mode t)                        ;; show line numbers
+(column-number-mode t)                      ;; show column numbers
+(size-indication-mode t)                    ;; show file size (emacs 22+)
 
 (if (require 'sml-modeline nil 'noerror)    ;; use sml-modeline if available
   (progn 
@@ -120,3 +123,16 @@ line instead."
   (scroll-bar-mode 1)                       ;; otherwise, show a scrollbar...
   (set-scroll-bar-mode 'right))             ;; ... on the right
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Displaying Line NUmbers
+;;
+;; quickly show/hide linenumbers by pressing C-F5
+(autoload 'linum-mode "linum" "toggle line numbers on/off" t) 
+(global-set-key (kbd "C-n") 'linum-mode)
+
+;; enable line numbers in specific modes automatically
+(add-hook 'c-mode-hook
+  (lambda() (linum-mode 1)))
+
