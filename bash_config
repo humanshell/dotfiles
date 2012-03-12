@@ -6,7 +6,9 @@ export PATH=$PATH:.
 
 # Add OSX specific directories to PATH
 if [ $OS == "Darwin" ]; then
-  export PATH=$PATH:$HOME/Dropbox/bin:/Applications/MAMP/Library/bin
+  export PATH=$PATH:/usr/local/sbin
+  export PATH=$PATH:$HOME/Dropbox/bin
+  export PATH=$PATH:/Applications/MAMP/Library/bin
 fi
 
 # load RVM
