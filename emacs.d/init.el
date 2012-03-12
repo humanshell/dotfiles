@@ -122,6 +122,11 @@ line instead."
 (require 'windmove)
 (windmove-default-keybindings 'meta)
 
+;; easily jump between header and implementation files in C
+(add-hook 'c-mode-common-hook
+  (lambda() 
+    (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
+
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
