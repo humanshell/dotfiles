@@ -78,25 +78,6 @@
   (show-paren-mode t)
   (setq show-paren-style 'parenthesis))
 
-;; slick-copy: make copy-past a bit more intelligent
-;; from: http://www.emacswiki.org/emacs/SlickCopy
-(defadvice kill-ring-save (before slick-copy activate compile)
-  "When called interactively with no active region, copy a single
-line instead."
-  (interactive
-    (if mark-active (list (region-beginning) (region-end))
-      (message "Copied line")
-      (list (line-beginning-position)
-               (line-beginning-position 2)))))
-
-(defadvice kill-region (before slick-cut activate compile)
-  "When called interactively with no active region, kill a single
-line instead."
-  (interactive
-    (if mark-active (list (region-beginning) (region-end))
-      (list (line-beginning-position)
-        (line-beginning-position 2)))))
-
 ;; uniquify: unique buffer names
 (require 'uniquify) ;; make buffer names more unique
 (setq 
@@ -215,3 +196,4 @@ line instead."
 (autopair-global-mode 1)
 (setq autopair-autowrap t)
 
+(put 'upcase-region 'disabled nil)
