@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # install.sh
 # - this script installs and sets up links to the dotfiles in the user's
@@ -16,6 +16,7 @@ ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
 ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
 ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/vim $HOME/.vim
+ln -s $HOME/.dotfiles/emacs.d $HOME/.emacs.d
 
 # create soft link to bash_config
 if [ $OS == "Darwin" ]; then
