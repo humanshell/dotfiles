@@ -114,6 +114,10 @@ line instead."
 (setq ispell-program-name "aspell"
   ispell-extra-args '("--sug-mode=ultra"))
 
+;; edit emacs init config file
+(global-set-key (kbd "C-c E") ;; .emacs
+  (lambda()(interactive)(find-file "~/.emacs.d/init.el")))
+
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
