@@ -3,7 +3,6 @@
 ;; Original code from:
 ;; http://www.djcbsoftware.nl/dot-emacs.html
 ;;
-;; -*-mode: Emacs-Lisp; folding-mode:t-*-
 ;; Copyright (C) 1996-2010  Dirk-Jan C. Binnema.
 ;; URL: http://www.djcbsoftware.nl/dot-emacs.html
 ;; This file is free software licensed under the terms of the
@@ -12,7 +11,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; set the load path  
-
+;;
 ;; add everything under ~/.emacs.d to it
 (let* ((my-lisp-dir "~/.emacs.d/")
         (default-directory my-lisp-dir))
@@ -97,6 +96,23 @@ line instead."
     (if mark-active (list (region-beginning) (region-end))
       (list (line-beginning-position)
         (line-beginning-position 2)))))
+
+;; backups
+(setq make-backup-files t ;; do make backups
+  backup-by-copying t     ;; and copy them here
+  backup-directory-alist '(("." . "~/.emacs.d/cache/backups")) 
+  version-control t
+  kept-new-versions 2
+  kept-old-versions 5
+  delete-old-versions t)
+
+;; autosave
+(setq auto-save-list-file-prefix
+  "~/.emacs.d/cache/auto-save-list/.saves-")
+
+;; spell check
+(setq ispell-program-name "aspell"
+  ispell-extra-args '("--sug-mode=ultra"))
 
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
