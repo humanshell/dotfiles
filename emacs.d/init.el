@@ -1,6 +1,8 @@
 ;; Local Emacs config file
 ;;
 ;; Original code from:
+;; http://www.djcbsoftware.nl/dot-emacs.html
+;;
 ;; -*-mode: Emacs-Lisp; folding-mode:t-*-
 ;; Copyright (C) 1996-2010  Dirk-Jan C. Binnema.
 ;; URL: http://www.djcbsoftware.nl/dot-emacs.html
