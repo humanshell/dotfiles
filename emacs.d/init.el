@@ -110,6 +110,11 @@ line instead."
 (setq auto-save-list-file-prefix
   "~/.emacs.d/cache/auto-save-list/.saves-")
 
+;; saveplace: save location in file when saving files
+(setq save-place-file "~/.emacs.d/cache/saveplace")
+(setq-default save-place t)            ;; activate it for all buffers
+(require 'saveplace)                   ;; get the package
+
 ;; savehist: save some history
 (setq savehist-additional-variables    ;; also save...
   '(search ring regexp-search-ring)    ;; ... my search entries
