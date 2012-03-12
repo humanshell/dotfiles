@@ -97,6 +97,14 @@ line instead."
       (list (line-beginning-position)
         (line-beginning-position 2)))))
 
+;; uniquify: unique buffer names
+(require 'uniquify) ;; make buffer names more unique
+(setq 
+  uniquify-buffer-name-style 'post-forward
+  uniquify-separator ":"
+  uniquify-after-kill-buffer-p t
+  uniquify-ignore-buffers-re "^\\*")
+
 ;; backups
 (setq make-backup-files t ;; do make backups
   backup-by-copying t     ;; and copy them here
@@ -186,9 +194,18 @@ line instead."
 (global-set-key (kbd "<f2>") 'dired-other-frame)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Packages
+;; Extra Packages
 ;;
 ;; enable dtrt-indent
 (require 'dtrt-indent)
 (dtrt-indent-mode 1)
+
+;; tramp, for remote access
+(require 'tramp)
+;; we need a bit more funky pattern, as tramp will start $SHELL
+;; (sudo -s), ie., zsh for root user
+(setq shell-prompt-pattern "^[^a-zA-Z].*[#$%>] *")
+(setq
+  tramp-default-method "ssh"
+  tramp-persistency-file-name "~/.emacs.d/cache/tramp")
 
