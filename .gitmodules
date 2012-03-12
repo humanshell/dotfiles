@@ -49,3 +49,6 @@
 [submodule "vim/bundle/ack-vim"]
 	path = vim/bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "emacs.d/packages/dtrt-indent"]
+	path = emacs.d/packages/dtrt-indent
+	url = git://github.com/emacsmirror/dtrt-indent.git
