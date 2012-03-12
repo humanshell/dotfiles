@@ -110,6 +110,13 @@ line instead."
 (setq auto-save-list-file-prefix
   "~/.emacs.d/cache/auto-save-list/.saves-")
 
+;; savehist: save some history
+(setq savehist-additional-variables    ;; also save...
+  '(search ring regexp-search-ring)    ;; ... my search entries
+  savehist-autosave-interval 60        ;; save every minute (default: 5 min)
+  savehist-file "~/.emacs.d/cache/savehist")   ;; keep my home clean
+(savehist-mode t)                      ;; do customization before activation
+
 ;; spell check
 (setq ispell-program-name "aspell"
   ispell-extra-args '("--sug-mode=ultra"))
