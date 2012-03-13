@@ -21,6 +21,9 @@
 (when (file-exists-p "~/.emacs.d/elpa/package.el")
   (when (load (expand-file-name "~/.emacs.d/elpa/package.el"))
     (package-initialize)))
+
+;; path to Lisp (need to make this more dynamic)
+(setq inferior-lisp-program "/usr/local/bin/clisp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -129,6 +132,9 @@
   (lambda() 
     (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
 
+;; enable upcase command
+(put 'upcase-region 'disabled nil)
+
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -196,4 +202,6 @@
 (autopair-global-mode 1)
 (setq autopair-autowrap t)
 
-(put 'upcase-region 'disabled nil)
+;; enable slime
+(require 'slime)
+(slime-setup)

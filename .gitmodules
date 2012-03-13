@@ -55,3 +55,6 @@
 [submodule "emacs.d/packages/autopair"]
 	path = emacs.d/packages/autopair
 	url = git://github.com/emacsmirror/autopair.git
+[submodule "emacs.d/packages/slime"]
+	path = emacs.d/packages/slime
+	url = git://github.com/emacsmirror/slime.git
