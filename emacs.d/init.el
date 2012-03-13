@@ -22,8 +22,8 @@
   (when (load (expand-file-name "~/.emacs.d/elpa/package.el"))
     (package-initialize)))
 
-;; path to Lisp (need to make this more dynamic)
-(setq inferior-lisp-program "/usr/local/bin/clisp")
+;; path to Lisp
+(setq inferior-lisp-program "clisp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
