@@ -58,3 +58,6 @@
 [submodule "emacs.d/packages/slime"]
 	path = emacs.d/packages/slime
 	url = git://github.com/emacsmirror/slime.git
+[submodule "emacs.d/themes/sunburst"]
+	path = emacs.d/themes/sunburst
+	url = git://github.com/neomantic/Emacs-Sunburst-Color-Theme.git
