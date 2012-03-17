@@ -67,3 +67,6 @@
 [submodule "emacs.d/packages/php-mode"]
 	path = emacs.d/packages/php-mode
 	url = git://github.com/jaalto/emacs-epackage--php-mode.git
+[submodule "vim/bundle/slimv"]
+	path = vim/bundle/slimv
+	url = git://github.com/vim-scripts/slimv.vim.git
