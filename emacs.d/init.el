@@ -18,10 +18,6 @@
   (setq load-path (cons my-lisp-dir load-path))
   (normal-top-level-add-subdirs-to-load-path))
 
-(when (file-exists-p "~/.emacs.d/elpa/package.el")
-  (when (load (expand-file-name "~/.emacs.d/elpa/package.el"))
-    (package-initialize)))
-
 ;; path to Lisp
 (setq inferior-lisp-program "clisp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -78,7 +74,8 @@
 
 ;; set the color theme if in gui
 (require 'color-theme)
-(provide 'color-theme-sunburst)
+(color-theme-initialize)
+(load-file "~/.emacs.d/themes/sunburst/color-theme-sunburst.el")
 (if window-system
   (color-theme-sunburst))
 
@@ -140,6 +137,9 @@
 
 ;; enable upcase command
 (put 'upcase-region 'disabled nil)
+
+;; enable php-mode
+(require 'php-mode)
 
 ;; key board / input method settings
 (setq locale-coding-system 'utf-8)
