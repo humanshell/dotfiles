@@ -76,10 +76,11 @@
   inhibit-startup-echo-area-message t)   ;; ... startup messages
 (setq require-final-newline t)           ;; end files with a newline
 
-;; set the color theme
+;; set the color theme if in gui
 (require 'color-theme)
 (require 'color-theme-solarized)
-(color-theme-solarized-dark)
+(if window-system
+  (color-theme-solarized-dark))
 
 ;; http://www.emacswiki.org/cgi-bin/wiki/ShowParenMode
 (when (fboundp 'show-paren-mode)
