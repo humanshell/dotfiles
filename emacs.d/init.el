@@ -78,9 +78,9 @@
 
 ;; set the color theme if in gui
 (require 'color-theme)
-(require 'color-theme-solarized)
+(provide 'color-theme-sunburst)
 (if window-system
-  (color-theme-solarized-dark))
+  (color-theme-sunburst))
 
 ;; http://www.emacswiki.org/cgi-bin/wiki/ShowParenMode
 (when (fboundp 'show-paren-mode)
