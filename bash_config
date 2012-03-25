@@ -3,6 +3,7 @@ OS=$(uname)
 
 # Add OSX specific directories to PATH
 if [ $OS == "Darwin" ]; then
+  export PATH=/usr/local/bin:$PATH
   export PATH=/usr/local/sbin:$PATH
   export PATH=/usr/local/pear/bin:$PATH
   export PATH=$PATH:$HOME/Dropbox/bin
