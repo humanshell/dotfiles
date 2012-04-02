@@ -17,6 +17,8 @@ ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
 ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/vim $HOME/.vim
 ln -s $HOME/.dotfiles/emacs.d $HOME/.emacs.d
+ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
+ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
 
 # create soft link to bash_config
 if [ $OS == "Darwin" ]; then
