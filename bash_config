@@ -78,11 +78,6 @@ else
   alias la="ls -hla --color=always --group-directories-first"
 fi
 
-# Alias for emacs from Homebrew on OSX
-if [ $OS == "Darwin" ]; then
-  alias emacs="/usr/local/Cellar/emacs/23.4/Emacs.app/Contents/MacOS/Emacs -nw"
-fi
-
 # Aliases for git
 alias gstat="git status"
 alias gpush="git push origin master"

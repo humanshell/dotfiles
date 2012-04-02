@@ -49,24 +49,6 @@
 [submodule "vim/bundle/ack-vim"]
 	path = vim/bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "emacs.d/packages/dtrt-indent"]
-	path = emacs.d/packages/dtrt-indent
-	url = git://github.com/emacsmirror/dtrt-indent.git
-[submodule "emacs.d/packages/autopair"]
-	path = emacs.d/packages/autopair
-	url = git://github.com/emacsmirror/autopair.git
-[submodule "emacs.d/packages/slime"]
-	path = emacs.d/packages/slime
-	url = git://github.com/emacsmirror/slime.git
-[submodule "emacs.d/themes/sunburst"]
-	path = emacs.d/themes/sunburst
-	url = git://github.com/neomantic/Emacs-Sunburst-Color-Theme.git
-[submodule "emacs.d/themes/solarized"]
-	path = emacs.d/themes/solarized
-	url = git://github.com/sellout/emacs-color-theme-solarized.git
-[submodule "emacs.d/packages/php-mode"]
-	path = emacs.d/packages/php-mode
-	url = git://github.com/jaalto/emacs-epackage--php-mode.git
 [submodule "vim/bundle/slimv"]
 	path = vim/bundle/slimv
 	url = git://github.com/vim-scripts/slimv.vim.git
