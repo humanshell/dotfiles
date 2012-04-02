@@ -3,18 +3,13 @@ OS=$(uname)
 
 # Add OSX specific directories to PATH
 if [ $OS == "Darwin" ]; then
-  export PATH=/usr/local/bin:$PATH
-  export PATH=/usr/local/sbin:$PATH
-  export PATH=/usr/local/pear/bin:$PATH
-  export PATH=$PATH:$HOME/Dropbox/bin
+  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/sbin:$PATH"
+  export PATH="$PATH:$HOME/Dropbox/bin"
 fi
 
-# Add the current folder to path
+# Add the current folder to PATH
 export PATH=$PATH:.
-
-# load RVM
-CC=gcc-4.2
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Add Vim as the default editor
 export EDITOR=vim
