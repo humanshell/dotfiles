@@ -44,7 +44,7 @@ set statusline+=\ %{fugitive#statusline()}
 " encoding
 set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
 " rvm
-set statusline+=\ %{rvm#statusline()}
+"set statusline+=\ %{rvm#statusline()}
 " line x of y
 set statusline+=\ [line\ %l\/%L\ %p%%]
 " Color
