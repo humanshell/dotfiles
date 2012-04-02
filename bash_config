@@ -89,7 +89,7 @@ alias ghist="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=shor
 export PAGER="more"
 
 # Load rbenv
-[[ -d $HOME/.rbenv ]] && source .rbenvrc
+[[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
 
 # Load phpenv
-[[ -d $HOME/.phpenv ]] && source .phpenvrc
+[[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
