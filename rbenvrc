@@ -1,0 +1,6 @@
+# update path
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+# Enable shims and autocompletion
+eval "$(rbenv init -)"
+
