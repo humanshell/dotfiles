@@ -20,10 +20,14 @@ ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
 
 # create soft link to bash_config
 if [ $OS == "Darwin" || $OS == "FreeBSD" ]; then
-  ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
+  [[ ! -f "$HOME/.bash_profile" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
 else
-  ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
+  [[ ! -f "$HOME/.bashrc" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
+
+# create soft links for mysql and sqlite histories to /dev/null
+[[ ! -h "$HOME/.mysql_history" ]] && ln -s /dev/null $HOME/.mysql_history
+[[ ! -h "$HOME/.sqlite_history" ]] && ln -s /dev/null $HOME/.sqlite_history
 
 # grab pathogen.vim from github so submodule plugins work
 if [ $OS == "Darwin" ]; then
