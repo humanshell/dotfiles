@@ -8,6 +8,8 @@ call pathogen#helptags()
 " general setup
 filetype plugin indent on     
 syntax enable
+set background=dark
+colorscheme solarized
 let mapleader = ","
 let g:mapleader = ","
 set modelines=0
