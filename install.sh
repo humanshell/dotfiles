@@ -9,7 +9,6 @@ OS=$(uname)
 GIT=$(which git)
 
 # create soft links to config files
-ln -s $HOME/.dotfiles/rvmrc $HOME/.rvmrc
 ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
@@ -20,7 +19,7 @@ ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
 ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
 
 # create soft link to bash_config
-if [ $OS == "Darwin" ]; then
+if [ $OS == "Darwin" || $OS == "FreeBSD" ]; then
   ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
 else
   ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
