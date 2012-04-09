@@ -50,6 +50,9 @@ elif [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
 elif [ -f  /usr/local/share/git-core/contrib/completion/git-completion.bash ]; then
   . /usr/local/share/git-core/contrib/completion/git-completion.bash
   GIT_PS1_SHOWDIRTYSTATE=true
+elif [ -f  /usr/share/git/completion/git-completion.bash ]; then
+  . /usr/share/git/completion/git-completion.bash
+  GIT_PS1_SHOWDIRTYSTATE=true
 fi
 
 if [ -f /opt/local/etc/bash_completion ]; then
