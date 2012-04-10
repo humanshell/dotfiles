@@ -70,6 +70,7 @@ alias df="df -h"
 alias du="du -shc"
 alias top="htop"
 alias apt="sudo apt-get"
+alias pac="sudo pacman"
 
 if [ $OS == "Darwin" -o $OS == "FreeBSD" ]; then
   alias ls="ls -hG"
