@@ -97,3 +97,7 @@ export PAGER="more"
 
 # Load phpenv
 [[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
+
+# Enable tab completion with sudo
+complete -cf sudo
+
