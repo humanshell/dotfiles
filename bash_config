@@ -29,6 +29,9 @@ White='\e[0;37m'        # White
 
 PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${txtrst}\n $ "
 
+# Enable solarized color scheme for GNU ls
+eval $(dircolors $HOME/.dotfiles/dircolors.256dark)
+
 # Enable use of git in the shell environment/prompt
 GIT_COMPLETION=$(find /usr -name git-completion.bash)
 if [[ ! -z $GIT_COMPLETION ]]; then
