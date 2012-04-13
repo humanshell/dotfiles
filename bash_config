@@ -17,39 +17,24 @@ export CVSEDITOR=vim
 export SVN_EDITOR=vim
 
 # Regular Colors
-#txtrst='\e[0m'          # Text Reset
-#Black='\e[0;30m'        # Black
-#Red='\e[0;31m'          # Red
-#Green='\e[0;32m'        # Green
-#Yellow='\e[0;33m'       # Yellow
-#Blue='\e[0;34m'         # Blue
-#Purple='\e[0;35m'       # Purple
-#Cyan='\e[0;36m'         # Cyan
-#White='\e[0;37m'        # White
-
-# Enable use of git in the shell environment/prompt
-if [ -f /usr/local/Cellar/git/1.7.8/etc/bash_completion.d/git-completion.bash ]; then
-  . /usr/local/Cellar/git/1.7.8/etc/bash_completion.d/git-completion.bash
-  GIT_PS1_SHOWDIRTYSTATE=true
-elif [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-  . /usr/local/etc/bash_completion.d/git-completion.bash
-  GIT_PS1_SHOWDIRTYSTATE=true
-elif [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  . /usr/local/git/contrib/completion/git-completion.bash
-  GIT_PS1_SHOWDIRTYSTATE=true
-elif [ -f  /usr/local/share/git-core/contrib/completion/git-completion.bash ]; then
-  . /usr/local/share/git-core/contrib/completion/git-completion.bash
-  GIT_PS1_SHOWDIRTYSTATE=true
-elif [ -f  /usr/share/git/completion/git-completion.bash ]; then
-  . /usr/share/git/completion/git-completion.bash
-  GIT_PS1_SHOWDIRTYSTATE=true
-fi
-
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-fi
+txtrst='\e[0m'          # Text Reset
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
 
 PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${txtrst}\n $ "
+
+# Enable use of git in the shell environment/prompt
+GIT_COMPLETION=$(find /usr -name git-completion.bash)
+if [[ ! -z $GIT_COMPLETION ]]; then
+  . $GIT_COMPLETION
+  GIT_PS1_SHOWDIRTYSTATE=true
+fi
 
 # Aliases to make the CLI a little easier to handle
 alias cs="clear"
