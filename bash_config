@@ -62,8 +62,6 @@ fi
 
 # Aliases for git
 alias gstat="git status"
-alias gpush="git push origin master"
-alias gpull="git pull origin master"
 alias gdiff="git diff"
 alias ghist="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 
