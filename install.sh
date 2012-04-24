@@ -10,7 +10,7 @@ GIT=$(which git)
 
 # create soft links to config files
 [[ ! -h "$HOME/.htoprc" ]]   && ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
-[[ ! -h "$HOME/.gtconfig" ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
+[[ ! -h "$HOME/.gitconfig" ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 [[ ! -h "$HOME/.gemrc" ]]    && ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
 [[ ! -h "$HOME/.ackrc" ]]    && ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
 [[ ! -h "$HOME/.vimrc" ]]    && ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
