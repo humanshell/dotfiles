@@ -176,9 +176,9 @@ if has("gui_running")
   set guioptions-=b " no scrollbar on the bottom
   set guioptions=aiA 
   set mouse=v
-  set guifont=Monaco:h12 "<- Maybe a good idea when using mac
+  "set guifont=Monaco:h12 "<- Maybe a good idea when using mac
 endif
-set guifont=Monaco:h12
+"set guifont=Monaco:h12
 
 let my_home = expand("$HOME/")
 
