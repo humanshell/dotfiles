@@ -5,10 +5,10 @@ OS=$(uname)
 if [ $OS == "Darwin" ]; then
   export PATH="/usr/local/bin:$PATH"
   export PATH="/usr/local/sbin:$PATH"
-  export PATH="$PATH:$HOME/Dropbox/bin"
 fi
 
 # Add the current folder to PATH
+export PATH="$PATH:$HOME/Dropbox/bin"
 export PATH=$PATH:.
 
 # Add Vim as the default editor
