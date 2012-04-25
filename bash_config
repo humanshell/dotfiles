@@ -49,6 +49,7 @@ alias du="du -shc"
 alias top="htop"
 alias apt="sudo apt-get"
 alias pac="sudo pacman"
+alias pak="sudo packer"
 
 if [ $OS == "Darwin" -o $OS == "FreeBSD" ]; then
   alias ls="ls -hG"
