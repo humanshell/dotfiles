@@ -8,7 +8,7 @@ if [ $OS == "Darwin" ]; then
 fi
 
 # Add the current folder and Drobox/bin to PATH
-export PATH="$PATH:$HOME/Dropbox/bin"
+export PATH=$PATH:$HOME/Dropbox/bin
 export PATH=$PATH:.
 
 # Add Vim as the default editor
