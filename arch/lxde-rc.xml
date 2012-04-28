@@ -277,11 +277,17 @@
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow"/>
+    </keybind>
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
       </action>
     </keybind>
-    <keybind key="A-S-Tab">
+    <keybind key="W-S-Tab">
       <action name="PreviousWindow">
         <allDesktops>yes</allDesktops>
       </action>
