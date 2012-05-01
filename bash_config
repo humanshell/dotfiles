@@ -30,11 +30,8 @@ White='\e[0;37m'        # White
 PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${txtrst}\n $ "
 
 # Enable use of git in the shell environment/prompt
-GIT_COMPLETION=$(find /usr -name git-completion.bash)
-if [[ ! -z $GIT_COMPLETION ]]; then
-  . $GIT_COMPLETION
-  GIT_PS1_SHOWDIRTYSTATE=true
-fi
+. $HOME/.dotfiles/git-completion.bash
+GIT_PS1_SHOWDIRTYSTATE=true
 
 # Aliases to make the CLI a little easier to handle
 alias cs="clear"
