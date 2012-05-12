@@ -1,5 +1,6 @@
-# grab the current OS
+# Useful variables
 OS=$(uname)
+DIRCOLORS=$(which dircolors)
 
 # Add OSX specific directories to PATH
 if [ $OS == "Darwin" ]; then
@@ -32,6 +33,11 @@ PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${tx
 # Enable use of git in the shell environment/prompt
 . $HOME/.dotfiles/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
+
+# Exec dircolors for gnome-terminal solarized
+if [ ! -z $DIRCOLORS ]; then
+  eval $(dircolors $HOME/.dotfiles/gnome-term-dircolors)
+fi
 
 # Aliases to make the CLI a little easier to handle
 alias cs="clear"
