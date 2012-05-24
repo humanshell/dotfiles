@@ -8,6 +8,9 @@ if [ $OS == "Darwin" ]; then
   export PATH="/usr/local/sbin:$PATH"
 fi
 
+# on Arch ack needs vendor_perl added to path
+export PATH=$PATH:/usr/bin/vendor_perl
+
 # Add the current folder and Drobox/bin to PATH
 export PATH=$PATH:$HOME/Dropbox/bin
 export PATH=$PATH:.
