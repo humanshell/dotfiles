@@ -11,6 +11,11 @@ fi
 # on Arch ack needs vendor_perl added to path
 export PATH=$PATH:/usr/bin/vendor_perl
 
+# export JAVA_HOME on FreeBSD when Java installed
+if [ $OS == "FreeBSD" ]; then
+  [ -d /usr/local/jdk1.6.0 ] && export JAVA_HOME=/usr/local/jdk1.6.0
+fi
+
 # Add the current folder and Drobox/bin to PATH
 export PATH=$PATH:$HOME/Dropbox/bin
 export PATH=$PATH:.
