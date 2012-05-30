@@ -13,7 +13,7 @@ export PATH=$PATH:/usr/bin/vendor_perl
 
 # export JAVA_HOME on FreeBSD when Java installed
 if [ $OS == "FreeBSD" ]; then
-  [ -d /usr/local/diablo-jdk1.6.0] && JAVA_HOME=/usr/local/diablo-jdk1.6.0
+  [ -d /usr/local/diablo-jdk1.6.0 ] && JAVA_HOME=/usr/local/diablo-jdk1.6.0
 fi
 
 # Add the current folder and Drobox/bin to PATH
