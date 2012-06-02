@@ -1,0 +1,43 @@
+background yes
+use_xft yes
+xftfont monospace:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_colour black
+double_buffer yes
+alignment tl
+gap_x 280
+gap_y 45
+minimum_size 220 200
+maximum_width 1024
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color gray
+default_shade_color 000000
+default_outline_color d9d7d6
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+#### end config
+
+#### Begin display information
+## everything below 'TEXT' is drawn on screen
+
+TEXT
+${font sans-serif:bold:size=8}EVERYTHING ${hr 2}
+${font sans-serif:normal:size=8}${exec tail -n24 /var/log/everything.log}
+
+${font sans-serif:bold:size=8}DMESG ${hr 2}
+${font sans-serif:normal:size=8}${exec dmesg | tail -n12}
+
+${font sans-serif:bold:size=8}ERRORS ${hr 2}
+${font sans-serif:normal:size=8}${exec tail -n12 /var/log/errors.log}

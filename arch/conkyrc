@@ -20,8 +20,8 @@ default_color gray
 default_shade_color 000000
 default_outline_color d9d7d6
 alignment tl
-gap_x 12
-gap_y 48
+gap_x 40
+gap_y 45
 no_buffers yes
 uppercase no
 cpu_avg_samples 2
@@ -32,17 +32,25 @@ color2 gray
 #  Output
 ##############################################
 TEXT
-CPU0: ${cpubar cpu0}
-CPU1: ${cpubar cpu1}
-CPU2: ${cpubar cpu2}
-CPU3: ${cpubar cpu3}
-
-RAM: $membar
-
 ${font sans-serif:bold:size=8}SYSTEM ${hr 2}
 ${font sans-serif:normal:size=8}$sysname $kernel $alignr $machine
 Host:$alignr$nodename
 Uptime:$alignr$uptime
+Desktop:$alignr$desktop 
+
+CPU0: ${freq_g cpu1} GHz
+${cpubar cpu0}
+CPU1: ${freq_g cpu2} GHz
+${cpubar cpu1}
+CPU2: ${freq_g cpu3} GHz
+${cpubar cpu2}
+CPU3: ${freq_g cpu4} GHz
+${cpubar cpu3}
+
+RAM: $mem/$memmax  $memperc%
+$membar
+
+${font sans-serif:bold:size=8}POWER ${hr 2}
 
 ${font sans-serif:bold:size=8}TOP PROCESSES ${hr 2}
 ${font sans-serif:normal:size=8}${top_mem name 1}${alignr}${top mem 1} %
@@ -60,6 +68,5 @@ Super+e$alignr Editor
 Super+m$alignr Media Player
 Super+w$alignr Web Browser
 Super+q$alignr Force Quit
-Super+g$alignr Character Map
 Super+l$alignr Lock
 Super+r$alignr Dmenu
