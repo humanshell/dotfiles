@@ -1,0 +1,11 @@
+(sleep 3 && /usr/bin/nm-applet --sm-disable) &
+/usr/bin/nmcli nm wifi on
+tint2 &
+conky -q &
+conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
+volumeicon -b &
+hsetroot
+xcompmgr -CcFf &
+batti &
+lxterminal &
+sleep 30 && dropboxd &
