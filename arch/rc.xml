@@ -692,6 +692,22 @@
       <focus>yes</focus>
       <maximized>no</maximized>
     </application>
+    <application name="terminal">
+      <position>
+        <monitor>1</monitor>
+      </position>
+      <focus>yes</focus>
+      <maximized>yes</maximized>
+      <decor>no</decor>
+    </application>
+    <application name="chromium">
+      <position>
+        <monitor>2</monitor>
+      </position>
+      <focus>yes</focus>
+      <maximized>yes</maximized>
+      <decor>no</decor>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
