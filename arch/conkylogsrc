@@ -3,6 +3,7 @@ use_xft yes
 xftfont monospace:size=9
 xftalpha 1
 update_interval 1.0
+update_interval_on_battery 5
 total_run_times 0
 own_window yes
 own_window_transparent yes
@@ -36,7 +37,7 @@ ${font sans-serif:bold:size=8}EVERYTHING ${hr 2}
 ${font sans-serif:normal:size=8}${exec tail -n24 /var/log/everything.log}
 
 ${font sans-serif:bold:size=8}DMESG ${hr 2}
-${font sans-serif:normal:size=8}${exec dmesg | tail -n12}
+${font sans-serif:normal:size=8}${exec dmesg | tail -n18}
 
 ${font sans-serif:bold:size=8}ERRORS ${hr 2}
-${font sans-serif:normal:size=8}${exec tail -n12 /var/log/errors.log}
+${font sans-serif:normal:size=8}${exec tail -n6 /var/log/errors.log}
