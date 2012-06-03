@@ -7,5 +7,5 @@ volumeicon -b &
 hsetroot
 xcompmgr -CcFf &
 batti &
-lxterminal &
+terminal &
 sleep 30 && dropboxd &

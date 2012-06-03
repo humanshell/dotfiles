@@ -271,10 +271,10 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>terminal</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>lxterminal</name>
+          <name>Terminal</name>
         </startupnotify>
       </action>
     </keybind>
