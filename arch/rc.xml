@@ -296,6 +296,15 @@
         </startupnotify>
       </action>
     </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>gmpc</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>Gnome Music Player Client</name>
+        </startupnotify>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <command>slimlock</command>
