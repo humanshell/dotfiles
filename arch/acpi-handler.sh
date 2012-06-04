@@ -86,7 +86,27 @@ case "$1" in
             *)
                 logger "ACPI action undefined: $3"
                 ;;
-    esac
+        esac
+    ;;
+    video/brightnessdown)
+        case "$2" in
+            BRTDN)
+                level=$(cat /sys/class/backlight/intel_backlight/brightness)
+                if [[ $level > 100 ]]; then
+                    echo $(($level-50)) > /sys/class/backlight/intel_backlight/brightness
+                fi
+            ;;
+        esac
+    ;;
+    video/brightnessup)
+        case "$2" in
+            BRTUP)
+                level=$(cat /sys/class/backlight/intel_backlight/brightness)
+                if [[ $level < 976 ]]; then
+                    echo $(($level+50)) > /sys/class/backlight/intel_backlight/brightness
+                fi
+            ;;
+        esac
     ;;
     *)
         logger "ACPI group/action undefined: $1 / $2"
