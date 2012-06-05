@@ -22,7 +22,6 @@ case "$1" in
     button/sleep)
         case "$2" in
             SLPB|SBTN)
-                #echo -n mem >/sys/power/state
                 pm-suspend
                 ;;
             *)
@@ -108,9 +107,13 @@ case "$1" in
             ;;
         esac
     ;;
+    video/switchmode)
+        /home/humanshell/Dropbox/bin/extmon switch
+        logger "Switched video modes"
+    ;;
     *)
         logger "ACPI group/action undefined: $1 / $2"
-        ;;
+    ;;
 esac
 
 # vim:set ts=4 sw=4 ft=sh et:
