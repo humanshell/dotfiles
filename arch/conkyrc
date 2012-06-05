@@ -52,7 +52,6 @@ $membar
 
 ${font sans-serif:bold:size=8}POWER ${hr 2}
 ${font sans-serif:normal:size=8}
-Fan:$alignr$acpifan
 Temp:$alignr$acpitemp
 Laptop Mode:$alignr$laptop_mode 
 Battery:$alignr$battery
@@ -60,8 +59,6 @@ $battery_bar
 
 ${font sans-serif:bold:size=8}NETWORK ${hr 2}
 ${font sans-serif:normal:size=8}
-ESSID:$alignr$wireless_essid
-Bitrate:$alignr$wireless_bitrate
 Address:$alignr${addr wlan0}
 Gateway$alignr$gw_ip
 
