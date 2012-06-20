@@ -1,11 +1,11 @@
+cairo-compmgr &
+hsetroot
 (sleep 3 && /usr/bin/nm-applet --sm-disable) &
 /usr/bin/nmcli nm wifi on
 tint2 &
+volumeicon -b &
+batti &
 conky -q &
 conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
-hsetroot
-xcompmgr -CcFf &
-batti &
 terminal &
-#volumeicon -b &
 sleep 30 && dropboxd &
