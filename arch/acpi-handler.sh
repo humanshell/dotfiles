@@ -1,10 +1,6 @@
 #!/bin/sh
 # Default acpi script that takes an entry for all actions
 
-minspeed=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_min_freq`
-maxspeed=`cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq`
-setspeed="/sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed"
-
 set $*
 
 case "$1" in
@@ -74,13 +70,13 @@ case "$1" in
     button/lid)
         case "$3" in
             close)
-                logger 'LID closed, stopping conky'
-                killall conky
+                logger 'LID closed'
+                #killall conky
                 ;;
             open)
-                logger 'LID opened, starting conky'
-                /usr/bin/conky -q -c /home/humanshell/.dotfiles/arch/conkyrc
-                /usr/bin/conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc
+                logger 'LID opened'
+                #/usr/bin/conky -q -c /home/humanshell/.dotfiles/arch/conkyrc
+                #/usr/bin/conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc
                 ;;
             *)
                 logger "ACPI action undefined: $3"
