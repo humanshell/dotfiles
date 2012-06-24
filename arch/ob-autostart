@@ -1,4 +1,4 @@
-cairo-compmgr &
+#cairo-compmgr &
 hsetroot
 (sleep 3 && /usr/bin/nm-applet --sm-disable) &
 /usr/bin/nmcli nm wifi on
@@ -8,4 +8,4 @@ batti &
 conky -q &
 conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
 terminal &
-sleep 30 && dropboxd &
+(sleep 30 && dropboxd) &
