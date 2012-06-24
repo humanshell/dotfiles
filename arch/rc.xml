@@ -280,10 +280,10 @@
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
-        <command>subl</command>
+        <command>thunderbird</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>subl</name>
+          <name>Thunderbird</name>
         </startupnotify>
       </action>
     </keybind>
