@@ -6,6 +6,6 @@ volumeicon -b &
 batti &
 conky -q &
 conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
-terminal &
+gnome-terminal &
 (sleep 30 && dropboxd) &
 /usr/bin/nmcli nm wifi on
