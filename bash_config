@@ -21,9 +21,9 @@ export PATH=$PATH:$HOME/Dropbox/bin
 export PATH=$PATH:.
 
 # Add Vim as the default editor
-export EDITOR=vim
-export CVSEDITOR=vim
-export SVN_EDITOR=vim
+export EDITOR=subl
+export CVSEDITOR=subl
+export SVN_EDITOR=subl
 
 # Regular Colors
 txtrst='\e[0m'          # Text Reset
