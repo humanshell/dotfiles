@@ -701,7 +701,7 @@
       <focus>yes</focus>
       <maximized>no</maximized>
     </application>
-    <application name="terminal">
+    <application name="gnome-terminal">
       <position>
         <monitor>1</monitor>
       </position>
