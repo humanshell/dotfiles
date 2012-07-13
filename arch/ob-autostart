@@ -1,4 +1,3 @@
-#cairo-compmgr &
 hsetroot
 (sleep 3 && /usr/bin/nm-applet --sm-disable) &
 tint2 &
