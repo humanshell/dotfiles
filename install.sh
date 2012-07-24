@@ -9,14 +9,14 @@ OS=$(uname)
 GIT=$(which git)
 
 # create soft links to config files
-[[ ! -h "$HOME/.htoprc" ]]   && ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
+[[ ! -h "$HOME/.htoprc"    ]] && ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 [[ ! -h "$HOME/.gitconfig" ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
-[[ ! -h "$HOME/.gemrc" ]]    && ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
-[[ ! -h "$HOME/.ackrc" ]]    && ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
-[[ ! -h "$HOME/.vimrc" ]]    && ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
-[[ ! -h "$HOME/.rbenvrc" ]]  && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
-[[ ! -h "$HOME/.phpenvrc" ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
-[[ ! -h "$HOME/.vim" ]]      && ln -s $HOME/.dotfiles/vim $HOME/.vim
+[[ ! -h "$HOME/.gemrc"     ]] && ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
+[[ ! -h "$HOME/.ackrc"     ]] && ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
+[[ ! -h "$HOME/.vimrc"     ]] && ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
+[[ ! -h "$HOME/.rbenvrc"   ]] && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
+[[ ! -h "$HOME/.phpenvrc"  ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
+[[ ! -h "$HOME/.vim"       ]] && ln -s $HOME/.dotfiles/vim $HOME/.vim
 
 # create soft link to bash_config
 if [[ $OS == "Darwin" || $OS == "FreeBSD" ]]; then
@@ -25,9 +25,10 @@ else
   [[ ! -h "$HOME/.bashrc" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
 fi
 
-# create soft links for mysql and sqlite histories to /dev/null
-[[ ! -h "$HOME/.mysql_history" ]] && ln -s /dev/null $HOME/.mysql_history
+# create security soft links to /dev/null
+[[ ! -h "$HOME/.mysql_history"  ]] && ln -s /dev/null $HOME/.mysql_history
 [[ ! -h "$HOME/.sqlite_history" ]] && ln -s /dev/null $HOME/.sqlite_history
+[[ ! -h "$HOME/.bash_history"   ]] && ln -s /dev/null $HOME/.bash_history
 
 # grab pathogen.vim from github so submodule plugins work
 if [[ $OS == "Darwin" ]]; then
