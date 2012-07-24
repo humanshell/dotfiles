@@ -271,10 +271,10 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>terminal</command>
+        <command>gnome-terminal</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Terminal</name>
+          <name>Gnome Terminal</name>
         </startupnotify>
       </action>
     </keybind>
