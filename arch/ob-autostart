@@ -1,11 +1,11 @@
-hsetroot
 xcompmgr -CcfF &
-(sleep 3 && /usr/bin/nm-applet --sm-disable) &
 tint2 &
 volumeicon -b &
 batti &
+hsetroot
 conky -q &
 conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
 gnome-terminal &
 (sleep 30 && dropboxd) &
-/usr/bin/nmcli nm wifi on
+(sleep 3 && /usr/bin/nm-applet --sm-disable) &
+/usr/bin/nmcli nm wifi on &
