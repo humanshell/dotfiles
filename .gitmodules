@@ -46,9 +46,6 @@
 [submodule "vim/bundle/ack-vim"]
 	path = vim/bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/slimv"]
-	path = vim/bundle/slimv
-	url = git://github.com/vim-scripts/slimv.vim.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
