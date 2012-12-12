@@ -17,6 +17,7 @@ GIT=$(which git)
 [[ ! -h "$HOME/.rbenvrc"   ]] && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
 [[ ! -h "$HOME/.phpenvrc"  ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
 [[ ! -h "$HOME/.vim"       ]] && ln -s $HOME/.dotfiles/vim $HOME/.vim
+[[ ! -h "$HOME/.tmux.conf" ]] && ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
 
 # create soft link to bash_config
 if [[ $OS == "Darwin" || $OS == "FreeBSD" ]]; then
@@ -31,6 +32,7 @@ fi
 [[ ! -h "$HOME/.bash_history"   ]] && ln -s /dev/null $HOME/.bash_history
 
 # grab pathogen.vim from github so submodule plugins work
+[[ ! -d "$HOME/.dotfiles/vim/autoload" ]] && mkdir -p $HOME/.dotfiles/vim/autoload
 if [[ $OS == "Darwin" ]]; then
   curl -so ~/.dotfiles/vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
