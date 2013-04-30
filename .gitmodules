@@ -37,9 +37,6 @@
 [submodule "vim/bundle/vim-ruby-minitest"]
 	path = vim/bundle/vim-ruby-minitest
 	url = https://github.com/sunaku/vim-ruby-minitest.git
-[submodule "vim/bundle/command-t"]
-	path = vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule "vim/bundle/ack-vim"]
 	path = vim/bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim.git
