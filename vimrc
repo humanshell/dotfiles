@@ -131,13 +131,8 @@ nnoremap <leader><leader> <c-^>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 
-" find file with command-t
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-
-" find file in current directory with command-t
-map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
-
-let g:CommandTMaxHeight = 20
+" find files with ctrlp
+map <leader>f :CtrlP
 
 " nerdtree setup
 let NERDTreeShowBookmarks = 0
@@ -156,14 +151,6 @@ let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': 
 let g:AutoCloseProtectedRegions = ["Character"]
 
 " ruby/rails
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
-map <leader>gs :CommandTFlush<cr>\|:CommandT public/stylesheets<cr>
-map <leader>ga :CommandTFlush<cr>\|:CommandT app/assets<cr>
 map <Leader>m :Rmodel 
 map <Leader>v :Rview 
 
@@ -188,7 +175,4 @@ endif
 
 " When vimrc is edited, automatically reload it
 autocmd! bufwritepost $MYVIMRC source %
-
-
-
 
