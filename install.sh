@@ -44,10 +44,11 @@ fi
 # initialize and update submodules
 $GIT submodule init && $GIT submodule update
 
-# install rbenv and ruby-build
+# install rbenv and nvm
 if [[ ! -d $HOME/.rbenv ]]; then
   $GIT clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
   mkdir -p $HOME/.rbenv/plugins
   $GIT clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+  $GIT clone git://github.com/creationix/nvm.git $HOME/.nvm
 fi
 

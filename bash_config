@@ -85,6 +85,9 @@ export PAGER="most"
 # Load phpenv
 [[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
 
+# Load nvm
+[[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
+
 # Enable tab completion with sudo
 complete -cf sudo
 
