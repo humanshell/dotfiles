@@ -1,5 +1,5 @@
 # update path
-export PATH="$HOME/.phpenv/bin:$PATH"
+export PATH=$HOME/.phpenv/bin:$PATH
 
 # Enable shims and autocompletion
 eval "$(phpenv init -)"

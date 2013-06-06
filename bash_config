@@ -2,29 +2,23 @@
 OS=$(uname)
 DIRCOLORS=$(which dircolors)
 
-# Add OSX specific directories to PATH
-if [ $OS == "Darwin" ]; then
-  export PATH="/usr/local/bin:$PATH"
-  export PATH="/usr/local/sbin:$PATH"
-  export PATH="/usr/local/share/npm/bin:$PATH"
+# setup $PATH
+if [ -z $TMUX ]; then
+  export PATH=/usr/local/bin:$PATH
+  export PATH=/usr/local/sbin:$PATH
+  export PATH=/usr/local/share/npm/bin:$PATH
+  export PATH=$PATH:/usr/bin/vendor_perl
+  export PATH=$PATH:$HOME/Dropbox/bin
+  export PATH=$PATH:.
+  [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
+  [[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
+  [[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
 fi
-
-# on Arch ack needs vendor_perl added to path
-export PATH=$PATH:/usr/bin/vendor_perl
-
-# export JAVA_HOME on FreeBSD when Java installed
-if [ $OS == "FreeBSD" ]; then
-  [ -d /usr/local/diablo-jdk1.6.0 ] && JAVA_HOME=/usr/local/diablo-jdk1.6.0
-fi
-
-# Add the current folder and Drobox/bin to PATH
-export PATH=$PATH:$HOME/Dropbox/bin
-export PATH=$PATH:.
 
 # Add Vim as the default editor
-export EDITOR=subl
-export CVSEDITOR=subl
-export SVN_EDITOR=subl
+export EDITOR=vim
+export CVSEDITOR=vim
+export SVN_EDITOR=vim
 
 # Regular Colors
 txtrst='\e[0m'          # Text Reset
@@ -59,6 +53,9 @@ alias top="htop"
 alias apt="sudo apt-get"
 alias pac="sudo pacman"
 alias pak="sudo packer"
+alias gstat="git status"
+alias gdiff="git diff"
+alias ghist="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
 alias dot_clean="find /home -name '._*' -exec rm {} \;"
 
 if [ $OS == "Darwin" -o $OS == "FreeBSD" ]; then
@@ -71,22 +68,8 @@ else
   alias la="ls -hla --color=always --group-directories-first"
 fi
 
-# Aliases for git
-alias gstat="git status"
-alias gdiff="git diff"
-alias ghist="git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
-
 # This adds color to man pages
 export PAGER="most"
-
-# Load rbenv
-[[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
-
-# Load phpenv
-[[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
-
-# Load nvm
-[[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
 
 # Enable tab completion with sudo
 complete -cf sudo
