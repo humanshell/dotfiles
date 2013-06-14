@@ -8,6 +8,15 @@
 OS=$(uname)
 GIT=$(which git)
 
+# create soft link to bash_config
+if [[ $OS == "Darwin" || $OS == "FreeBSD" ]]; then
+  [[ -f "$HOME/.bash_profile"   ]] && mv $HOME/.bash_profile $HOME/.bash_profile.bak
+  [[ ! -h "$HOME/.bash_profile" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
+else
+  [[ -f "$HOME/.bashrc"   ]] && mv $HOME/.bashrc $HOME/.bashrc.bak
+  [[ ! -h "$HOME/.bashrc" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
+fi
+
 # create soft links to config files
 [[ ! -h "$HOME/.htoprc"    ]] && ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
 [[ ! -h "$HOME/.gitconfig" ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
@@ -16,33 +25,18 @@ GIT=$(which git)
 [[ ! -h "$HOME/.vimrc"     ]] && ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
 [[ ! -h "$HOME/.rbenvrc"   ]] && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
 [[ ! -h "$HOME/.phpenvrc"  ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
-[[ ! -h "$HOME/.vim"       ]] && ln -s $HOME/.dotfiles/vim $HOME/.vim
 [[ ! -h "$HOME/.tmux.conf" ]] && ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
-
-# create soft link to bash_config
-if [[ $OS == "Darwin" || $OS == "FreeBSD" ]]; then
-  [[ ! -h "$HOME/.bash_profile" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bash_profile
-else
-  [[ ! -h "$HOME/.bashrc" ]] && ln -s $HOME/.dotfiles/bash_config $HOME/.bashrc
-fi
 
 # create security soft links to /dev/null
 [[ ! -h "$HOME/.mysql_history"  ]] && ln -s /dev/null $HOME/.mysql_history
 [[ ! -h "$HOME/.sqlite_history" ]] && ln -s /dev/null $HOME/.sqlite_history
+[[ ! -h "$HOME/.psql_history"   ]] && ln -s /dev/null $HOME/.psql_history
 [[ ! -h "$HOME/.bash_history"   ]] && ln -s /dev/null $HOME/.bash_history
 
-# grab pathogen.vim from github so submodule plugins work
-[[ ! -d "$HOME/.dotfiles/vim/autoload" ]] && mkdir -p $HOME/.dotfiles/vim/autoload
-if [[ $OS == "Darwin" ]]; then
-  curl -so ~/.dotfiles/vim/autoload/pathogen.vim \
-        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-else
-  wget --no-check-certificate -O ~/.dotfiles/vim/autoload/pathogen.vim \
-        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-fi
-
-# initialize and update submodules
-$GIT submodule init && $GIT submodule update
+# install Vundle
+[[ ! -d "$HOME/.vim/bundle" ]] && mkdir -p $HOME/.vim/bundle
+$GIT clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall
 
 # install rbenv and nvm
 if [[ ! -d $HOME/.rbenv ]]; then

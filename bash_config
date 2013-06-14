@@ -21,15 +21,15 @@ export CVSEDITOR=vim
 export SVN_EDITOR=vim
 
 # Regular Colors
-txtrst='\e[0m'          # Text Reset
-Black='\e[0;30m'        # Black
-Red='\e[0;31m'          # Red
-Green='\e[0;32m'        # Green
-Yellow='\e[0;33m'       # Yellow
-Blue='\e[0;34m'         # Blue
-Purple='\e[0;35m'       # Purple
-Cyan='\e[0;36m'         # Cyan
-White='\e[0;37m'        # White
+txtrst='\e[0m'    # Text Reset
+Black='\e[0;30m'  # Black
+Red='\e[0;31m'    # Red
+Green='\e[0;32m'  # Green
+Yellow='\e[0;33m' # Yellow
+Blue='\e[0;34m'   # Blue
+Purple='\e[0;35m' # Purple
+Cyan='\e[0;36m'   # Cyan
+White='\e[0;37m'  # White
 
 PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${txtrst}\n $ "
 
@@ -73,4 +73,3 @@ export PAGER="most"
 
 # Enable tab completion with sudo
 complete -cf sudo
-

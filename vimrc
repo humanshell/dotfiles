@@ -1,15 +1,42 @@
-" use vim features not vi
+" be iMproved
 set nocompatible
 
-" manage bundles with pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+" Vundle required setup/init
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" My Bundles:
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"
+" original repos on github
+" EXAMPLE: Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-markdown.git'
+Bundle 'tpope/vim-haml.git'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-bundler.git'
+Bundle 'tpope/vim-endwise.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'mileszs/ack.vim.git'
+Bundle 'panozzaj/vim-autocorrect.git'
+Bundle 'Townk/vim-autoclose.git'
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'honza/vim-snippets.git'
+"
+" vim-scripts repos
+" EXAMPLE: Bundle 'L9'
+"
+" non github repos
+" EXAMPLE: 'git://git.wincent.com/command-t.git'
 
 " general setup
-filetype plugin indent on     
+filetype plugin indent on     " required!
 syntax enable
 set background=dark
-colorscheme solarized
 let mapleader = ","
 let g:mapleader = ","
 set modelines=0
@@ -37,21 +64,13 @@ set backspace=indent,eol,start
 set laststatus=2
 
 " status line setup
-" path
-set statusline=%f
-" flags
-set statusline+=%m%r%h%w
-" git branch
-set statusline+=\ %{fugitive#statusline()}
-" encoding
-set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
-" rvm
-"set statusline+=\ %{rvm#statusline()}
-" line x of y
-set statusline+=\ [line\ %l\/%L\ %p%%]
-" Color
+set statusline=%f                               " path
+set statusline+=%m%r%h%w                        " flags
+set statusline+=\ %{fugitive#statusline()}      " git branch
+set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}] " encoding
+set statusline+=\ [line\ %l\/%L\ %p%%]          " line x of y
+" color
 hi StatusLine ctermfg=Black ctermbg=White
-" Change color of status line in insert mode
 au InsertEnter * hi StatusLine ctermbg=DarkBlue
 au InsertLeave * hi StatusLine ctermfg=Black ctermbg=White
 
@@ -68,7 +87,7 @@ if exists("+colorcolumn")
   set colorcolumn=80
 endif
 
-" bind control-l to hash rocket
+" bind ctrl-l to hash rocket
 imap <C-l> <Space>=><Space>
 
 " window height setup
@@ -97,12 +116,14 @@ map <c-space> ?
 " Center screen when scrolling search results
 nmap n nzz
 nmap N Nzz
+
 " map ESC
 imap jj <ESC>
+
 " ACK
 set grepprg=ack
-" ,a to Ack (search in files)
 nnoremap <leader>a :Ack
+
 " turn off arrow keys
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -114,16 +135,21 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+
 " move lines up and down
 map <C-J> :m +1 <CR>
 map <C-K> :m -2 <CR>
+
 " switch between buffers
 noremap <tab> :bn<CR>
 noremap <S-tab> :bp<CR>
+
 " close buffer
 nmap <leader>d :bd<CR>
+
 " close all buffers
 nmap <leader>D :bufdo bd<CR>
+
 " switch between last two buffers
 nnoremap <leader><leader> <c-^>
 
@@ -135,6 +161,7 @@ nmap <leader>w :w<CR>
 map <leader>f :CtrlP
 
 " nerdtree setup
+map <leader>p :NERDTreeToggle<cr>
 let NERDTreeShowBookmarks = 0
 let NERDChristmasTree = 1
 let NERDTreeWinPos = "left"
@@ -143,16 +170,14 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 50 
 let NERDTreeChDirMode = 2
 let NERDTreeDirArrows = 1
-" open file browser
-map <leader>p :NERDTreeToggle<cr>
 
 " autoClose
 let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
 let g:AutoCloseProtectedRegions = ["Character"]
 
-" ruby/rails
-map <Leader>m :Rmodel 
-map <Leader>v :Rview 
+" vim-rails
+map <Leader>m :Rmodel
+map <Leader>v :Rview
 
 " gui setup
 if has("gui_running")
