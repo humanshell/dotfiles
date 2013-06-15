@@ -1,6 +1,5 @@
 # Useful variables
 OS=$(uname)
-DIRCOLORS=$(which dircolors)
 
 # setup $PATH
 if [ -z $TMUX ]; then
