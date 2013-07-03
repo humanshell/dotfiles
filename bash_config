@@ -9,10 +9,12 @@ if [ -z $TMUX ]; then
   export PATH=$PATH:/usr/bin/vendor_perl
   export PATH=$PATH:$HOME/Dropbox/bin
   export PATH=$PATH:.
-  [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
-  [[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
-  [[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
 fi
+
+# setup ruby, php and node version managers
+[[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
+[[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
+[[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
 
 # Add Vim as the default editor
 export EDITOR=vim
