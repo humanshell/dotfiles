@@ -33,6 +33,12 @@ fi
 [[ ! -h "$HOME/.psql_history"   ]] && ln -s /dev/null $HOME/.psql_history
 [[ ! -h "$HOME/.bash_history"   ]] && ln -s /dev/null $HOME/.bash_history
 
+# customize some OSX features
+if [[ $OS == "Darwin" ]]; then
+  defaults write com.apple.dashboard mcx-disabled -bool true # disable dashboard
+  hash tmutil &> /dev/null && sudo tmutil disablelocal # disable local time machine backups
+fi
+
 # install Vundle
 [[ ! -d "$HOME/.vim/bundle" ]] && mkdir -p $HOME/.vim/bundle
 $GIT clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
