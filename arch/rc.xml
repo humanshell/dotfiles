@@ -216,15 +216,15 @@
         <desktop>4</desktop>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="A-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <keybind key="W-q">
+    <keybind key="A-q">
       <action name="Close"/>
     </keybind>
-    <keybind key="W-r">
+    <keybind key="A-r">
       <action name="Execute">
-        <command>~/.config/dmenu/dmenu-bind.sh</command>
+        <command>dmenu_run</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>dmenu</name>
@@ -236,7 +236,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="W-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
@@ -251,7 +251,7 @@
         <allDesktops>yes</allDesktops>
       </action>
     </keybind>
-    <keybind key="W-f">
+    <keybind key="A-f">
       <action name="Execute">
         <command>pcmanfm</command>
         <startupnotify>
@@ -260,7 +260,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-w">
+    <keybind key="A-w">
       <action name="Execute">
         <command>chromium</command>
         <startupnotify>
@@ -269,16 +269,16 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-t">
+    <keybind key="A-t">
       <action name="Execute">
-        <command>gnome-terminal</command>
+        <command>lxterminal</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Gnome Terminal</name>
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-e">
+    <keybind key="A-e">
       <action name="Execute">
         <command>thunderbird</command>
         <startupnotify>
@@ -287,7 +287,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-v">
+    <keybind key="A-v">
       <action name="Execute">
         <command>vlc</command>
         <startupnotify>
@@ -296,7 +296,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-m">
+    <keybind key="A-m">
       <action name="Execute">
         <command>gmpc</command>
         <startupnotify>
@@ -305,7 +305,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-l">
+    <keybind key="A-l">
       <action name="Execute">
         <command>slimlock</command>
         <startupnotify>
@@ -314,15 +314,15 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-space">
+    <keybind key="A-space">
       <action name="ShowMenu">
         <menu>root-menu</menu>
       </action>
     </keybind>
-    <keybind key="W-a">
+    <keybind key="A-a">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="W-S-a">
+    <keybind key="A-S-a">
       <action name="ToggleDecorations"/>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
@@ -689,7 +689,7 @@
     submenu will not be hidden until a different submenu is opened -->
     <applicationIcons>yes</applicationIcons>
     <!-- controls if icons appear in the client-list-(combined-)menu -->
-    <manageDesktops>yes</manageDesktops>
+    <manageDesktops>no</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
     <showIcons>yes</showIcons>
   </menu>
@@ -701,7 +701,7 @@
       <focus>yes</focus>
       <maximized>no</maximized>
     </application>
-    <application name="gnome-terminal">
+    <application name="lxterminal">
       <position>
         <monitor>1</monitor>
       </position>
@@ -711,11 +711,11 @@
     </application>
     <application name="chromium">
       <position>
-        <monitor>2</monitor>
+        <monitor>1</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
-      <decor>no</decor>
+      <decor>yes</decor>
     </application>
     <application name="Mail">
       <position>
