@@ -72,6 +72,7 @@ case "$1" in
             close)
                 logger 'LID closed'
                 #killall conky
+                pm-suspend
                 ;;
             open)
                 logger 'LID opened'
