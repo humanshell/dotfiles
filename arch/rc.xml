@@ -53,7 +53,7 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
       <size>8</size>
@@ -92,6 +92,9 @@
     </font>
     <font place="ActiveOnScreenDisplay">
       <name/>
+      <size>8</size>
+      <weight></weight>
+      <slant></slant>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Sans</name>
@@ -122,7 +125,7 @@
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
   <resize>
-    <drawContents>yes</drawContents>
+    <drawContents>no</drawContents>
     <popupShow>Nonpixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
@@ -325,17 +328,17 @@
     <keybind key="A-S-a">
       <action name="ToggleDecorations"/>
     </keybind>
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="C-0x44">
       <action name="Execute">
         <command>amixer set Master 5%+ unmute</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="66">
       <action name="Execute">
         <command>amixer set Master 5%- unmute</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="67">
       <action name="Execute">
         <command>amixer set Master toggle</command>
       </action>
