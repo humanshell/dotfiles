@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Onyx</name>
+    <name>Dyne</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -93,8 +93,8 @@
     <font place="ActiveOnScreenDisplay">
       <name/>
       <size>8</size>
-      <weight></weight>
-      <slant></slant>
+      <weight/>
+      <slant/>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Sans</name>
@@ -112,13 +112,11 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>1</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
+      <name>Terminal</name>
+      <name>Internet</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -283,10 +281,10 @@
     </keybind>
     <keybind key="A-e">
       <action name="Execute">
-        <command>thunderbird</command>
+        <command>leafpad</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Thunderbird</name>
+          <name>leafpad</name>
         </startupnotify>
       </action>
     </keybind>
@@ -714,7 +712,7 @@
     </application>
     <application name="chromium">
       <position>
-        <monitor>1</monitor>
+        <monitor>2</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
@@ -722,7 +720,7 @@
     </application>
     <application name="Mail">
       <position>
-        <monitor>4</monitor>
+        <monitor>2</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>

@@ -1,6 +1,6 @@
 background yes
 use_xft yes
-xftfont monospace:size=9
+xftfont inconsolata:size=9
 xftalpha 1
 update_interval 1.0
 update_interval_on_battery 5
@@ -11,7 +11,7 @@ own_window_type desktop
 own_window_colour black
 double_buffer yes
 minimum_size 1 1
-maximum_width 260
+maximum_width 300
 draw_shades no
 draw_outline no
 draw_borders no
@@ -19,7 +19,7 @@ draw_graph_borders no
 default_color gray
 default_shade_color 000000
 default_outline_color d9d7d6
-alignment tl
+alignment tr
 gap_x 40
 gap_y 45
 no_buffers yes
@@ -32,38 +32,33 @@ color2 gray
 #  Output
 ##############################################
 TEXT
-${font sans-serif:bold:size=8}SYSTEM ${hr 2}
-${font sans-serif:normal:size=8}
-$sysname $kernel $alignr $machine
-Host:$alignr$nodename (desktop: $desktop)
-Uptime:$alignr$uptime
+${font inconsolata:bold:size=12}SYSTEM ${hr 2}
+${font inconsolata:normal:size=10}
+$sysname $alignr $kernel
+Host$alignr$nodename
+Uptime$alignr$uptime
+Address$alignr${addr mlan0}
+Gateway$alignr$gw_ip
+Temp$alignr$acpitemp
+Battery$alignr$battery
 
-CPU0: ${freq_g cpu1} GHz
+${font inconsolata:bold:size=12}HDD $fs_used_perc% ${hr 2}
+${font inconsolata:normal:size=10}
+$alignr$fs_used/$fs_size
+$fs_bar
+
+${font inconsolata:bold:size=12}CPU ${cpu cpu0}% ${hr 2}
+${font inconsolata:normal:size=10}
+$alignr${freq_g cpu0} GHz
 ${cpubar cpu0}
-CPU1: ${freq_g cpu2} GHz
-${cpubar cpu1}
-CPU2: ${freq_g cpu3} GHz
-${cpubar cpu2}
-CPU3: ${freq_g cpu4} GHz
-${cpubar cpu3}
 
-RAM: $mem/$memmax$alignr$memperc%
+${font inconsolata:bold:size=12}RAM $memperc% ${hr 2}
+${font inconsolata:normal:size=10}
+$alignr$mem/$memmax
 $membar
 
-${font sans-serif:bold:size=8}POWER ${hr 2}
-${font sans-serif:normal:size=8}
-Temp:$alignr$acpitemp
-Laptop Mode:$alignr$laptop_mode 
-Battery:$alignr$battery
-$battery_bar
-
-${font sans-serif:bold:size=8}NETWORK ${hr 2}
-${font sans-serif:normal:size=8}
-Address:$alignr${addr wlan0}
-Gateway$alignr$gw_ip
-
-${font sans-serif:bold:size=8}PROCESSES ($running_processes/$processes) ${hr 2}
-${font sans-serif:normal:size=8}
+${font inconsolata:bold:size=12}PROCESSES $processes ${hr 2}
+${font inconsolata:normal:size=10}
 ${top_mem name 1}${alignr}${top mem 1}%
 ${top_mem name 2}${alignr}${top mem 2}%
 ${top_mem name 3}${alignr}${top mem 3}%
@@ -71,14 +66,12 @@ ${top_mem name 4}${alignr}${top mem 4}%
 ${top_mem name 5}${alignr}${top mem 5}%
 ${top_mem name 6}${alignr}${top mem 6}%
 
-${font sans-serif:bold:size=8}SHORTCUTS ${hr 2}
-${font sans-serif:normal:size=8}
+${font inconsolata:bold:size=12}SHORTCUTS ${hr 2}
+${font inconsolata:normal:size=10}
 Super+space$alignr Main Menu
+Super+r$alignr Spotlight
 Super+t$alignr Terminal
-Super+f$alignr File Manager
-Super+e$alignr Thunderbird
-Super+m$alignr Music Player
-Super+w$alignr Web Browser
+Super+f$alignr PCManFM
+Super+e$alignr Leafpad
+Super+w$alignr Chromium
 Super+q$alignr Force Quit
-Super+l$alignr Lock
-Super+r$alignr Dmenu
