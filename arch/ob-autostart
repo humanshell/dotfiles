@@ -1,11 +1,14 @@
-xcompmgr -CcfF &
-tint2 &
-volumeicon -b &
-batti &
+xset -dpms
+xset s off
+compton -cGb
 hsetroot
+tint2 &
+lxterminal --command=tmux &
 conky -q &
-conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
-gnome-terminal &
-(sleep 30 && dropboxd) &
-(sleep 3 && /usr/bin/nm-applet --sm-disable) &
-/usr/bin/nmcli nm wifi on &
+#conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
+#xcompmgr -CcfF &
+#volumeicon -b &
+#batti &
+#(sleep 30 && dropboxd) &
+#(sleep 3 && /usr/bin/nm-applet --sm-disable) &
+#/usr/bin/nmcli nm wifi on &

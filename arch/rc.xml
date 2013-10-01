@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Onyx</name>
+    <name>Dyne</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -53,7 +53,7 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
       <size>8</size>
@@ -92,6 +92,9 @@
     </font>
     <font place="ActiveOnScreenDisplay">
       <name/>
+      <size>8</size>
+      <weight/>
+      <slant/>
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Sans</name>
@@ -109,20 +112,18 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>1</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
-      <!-- set names up here if you want to, like this:
-    <name>desktop 1</name>
-    <name>desktop 2</name>
-    -->
+      <name>Terminal</name>
+      <name>Internet</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
   <resize>
-    <drawContents>yes</drawContents>
+    <drawContents>no</drawContents>
     <popupShow>Nonpixel</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
@@ -216,15 +217,15 @@
         <desktop>4</desktop>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="A-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
-    <keybind key="W-q">
+    <keybind key="A-q">
       <action name="Close"/>
     </keybind>
-    <keybind key="W-r">
+    <keybind key="A-r">
       <action name="Execute">
-        <command>~/.config/dmenu/dmenu-bind.sh</command>
+        <command>dmenu_run</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>dmenu</name>
@@ -236,7 +237,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
+    <keybind key="W-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>
       </action>
@@ -251,7 +252,7 @@
         <allDesktops>yes</allDesktops>
       </action>
     </keybind>
-    <keybind key="W-f">
+    <keybind key="A-f">
       <action name="Execute">
         <command>pcmanfm</command>
         <startupnotify>
@@ -260,7 +261,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-w">
+    <keybind key="A-w">
       <action name="Execute">
         <command>chromium</command>
         <startupnotify>
@@ -269,25 +270,25 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-t">
+    <keybind key="A-t">
       <action name="Execute">
-        <command>gnome-terminal</command>
+        <command>lxterminal</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Gnome Terminal</name>
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-e">
+    <keybind key="A-e">
       <action name="Execute">
-        <command>thunderbird</command>
+        <command>leafpad</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Thunderbird</name>
+          <name>leafpad</name>
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-v">
+    <keybind key="A-v">
       <action name="Execute">
         <command>vlc</command>
         <startupnotify>
@@ -296,7 +297,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-m">
+    <keybind key="A-m">
       <action name="Execute">
         <command>gmpc</command>
         <startupnotify>
@@ -305,7 +306,7 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-l">
+    <keybind key="A-l">
       <action name="Execute">
         <command>slimlock</command>
         <startupnotify>
@@ -314,28 +315,28 @@
         </startupnotify>
       </action>
     </keybind>
-    <keybind key="W-space">
+    <keybind key="A-space">
       <action name="ShowMenu">
         <menu>root-menu</menu>
       </action>
     </keybind>
-    <keybind key="W-a">
+    <keybind key="A-a">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="W-S-a">
+    <keybind key="A-S-a">
       <action name="ToggleDecorations"/>
     </keybind>
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="C-0x44">
       <action name="Execute">
         <command>amixer set Master 5%+ unmute</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="66">
       <action name="Execute">
         <command>amixer set Master 5%- unmute</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="67">
       <action name="Execute">
         <command>amixer set Master toggle</command>
       </action>
@@ -689,7 +690,7 @@
     submenu will not be hidden until a different submenu is opened -->
     <applicationIcons>yes</applicationIcons>
     <!-- controls if icons appear in the client-list-(combined-)menu -->
-    <manageDesktops>yes</manageDesktops>
+    <manageDesktops>no</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
     <showIcons>yes</showIcons>
   </menu>
@@ -701,7 +702,7 @@
       <focus>yes</focus>
       <maximized>no</maximized>
     </application>
-    <application name="gnome-terminal">
+    <application name="lxterminal">
       <position>
         <monitor>1</monitor>
       </position>
@@ -715,11 +716,11 @@
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
-      <decor>no</decor>
+      <decor>yes</decor>
     </application>
     <application name="Mail">
       <position>
-        <monitor>4</monitor>
+        <monitor>2</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
