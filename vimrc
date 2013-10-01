@@ -27,6 +27,7 @@ Bundle 'Townk/vim-autoclose.git'
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'honza/vim-snippets.git'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-scripts/taglist.vim'
 "
 " vim-scripts repos
 " EXAMPLE: Bundle 'L9'
