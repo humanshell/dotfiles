@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<item label="Files">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="LXTerminal">
+			<action name="Execute">
+				<execute>lxterminal</execute>
+			</action>
+		</item>
+		<item label="Chromium">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+		<item label="Leafpad">
+			<action name="Execute">
+				<execute>leafpad</execute>
+			</action>
+		</item>
+		<item label="Dropbox">
+			<action name="Execute">
+				<execute>dropboxd</execute>
+			</action>
+		</item>
+		<separator/>
+    <menu id="36" label="Settings">
+      <item label="Appearance">
+        <action name="Execute">
+          <execute>lxappearance</execute>
+        </action>
+      </item>
+      <item label="Desktop Preferences">
+        <action name="Execute">
+          <execute>pcmanfm --desktop-pref</execute>
+        </action>
+      </item>
+      <item label="Openbox Configuration">
+        <action name="Execute">
+          <execute>obconf</execute>
+        </action>
+      </item>
+      <item label="Panel (tint2)">
+        <action name="Execute">
+          <execute>tint2conf</execute>
+        </action>
+      </item>
+      <item label="Preferred Applications">
+        <action name="Execute">
+          <execute>libfm-pref-apps</execute>
+        </action>
+      </item>
+    </menu>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<separator/>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>

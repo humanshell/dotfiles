@@ -3,8 +3,8 @@ xset s off
 compton -cGb
 hsetroot
 tint2 &
-lxterminal &
-#conky -q &
+lxterminal --command=tmux &
+conky -q &
 #conky -q -c /home/humanshell/.dotfiles/arch/conkylogsrc &
 #xcompmgr -CcfF &
 #volumeicon -b &
