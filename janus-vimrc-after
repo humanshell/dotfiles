@@ -1,0 +1,51 @@
+" general setup
+set showcmd
+set cursorline
+set scrolloff=3
+
+" status line setup
+set statusline=%f                          " path
+set statusline+=%m%r%h%w                   " flags
+set statusline+=\ %{fugitive#statusline()} " git branch
+set statusline+=\ [line\ %l\/%L\ %p%%]     " line x of y
+
+" status line color
+hi StatusLine ctermfg=White ctermbg=Black
+au InsertEnter * hi StatusLine ctermbg=Red
+au InsertLeave * hi StatusLine ctermbg=Black
+
+" line number color
+hi LineNr ctermfg=Grey
+
+" bind ctrl-l to hash rocket
+imap <C-l> <Space>=><Space>
+
+" map ESC
+imap jj <ESC>
+
+" switch between buffers
+noremap <tab> :bn<CR>
+noremap <S-tab> :bp<CR>
+
+" close buffer
+nmap <leader>d :bd<CR>
+
+" close all buffers
+nmap <leader>D :bufdo bd<CR>
+
+" Saving and exit
+nmap <leader>q :q<CR>
+nmap <leader>w :w<CR>
+
+" nerdtree setup
+map <leader>p :NERDTreeToggle<cr>
+let NERDTreeShowBookmarks = 0
+let NERDChristmasTree = 1
+let NERDTreeHijackNetrw = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeChDirMode = 2
+let NERDTreeDirArrows = 0
+
+" When vimrc is edited, automatically reload it
+autocmd! bufwritepost $MYVIMRC source %
+

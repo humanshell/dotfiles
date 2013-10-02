@@ -13,21 +13,8 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 " EXAMPLE: Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-markdown.git'
-Bundle 'tpope/vim-haml.git'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-bundler.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'mileszs/ack.vim.git'
-Bundle 'panozzaj/vim-autocorrect.git'
-Bundle 'Townk/vim-autoclose.git'
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'honza/vim-snippets.git'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'panozzaj/vim-autocorrect.git'
+"Bundle 'Townk/vim-autoclose.git'
 "
 " vim-scripts repos
 " EXAMPLE: Bundle 'L9'

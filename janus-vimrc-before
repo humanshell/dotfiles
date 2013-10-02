@@ -1,0 +1,3 @@
+" general setup
+let mapleader = ","
+let g:mapleader = ","

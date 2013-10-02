@@ -18,14 +18,14 @@ else
 fi
 
 # create soft links to config files
-[[ ! -h "$HOME/.htoprc"    ]] && ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
-[[ ! -h "$HOME/.gitconfig" ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
-[[ ! -h "$HOME/.gemrc"     ]] && ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
-[[ ! -h "$HOME/.ackrc"     ]] && ln -s $HOME/.dotfiles/ackrc $HOME/.ackrc
-[[ ! -h "$HOME/.vimrc"     ]] && ln -s $HOME/.dotfiles/vimrc $HOME/.vimrc
-[[ ! -h "$HOME/.rbenvrc"   ]] && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
-[[ ! -h "$HOME/.phpenvrc"  ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
-[[ ! -h "$HOME/.tmux.conf" ]] && ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
+[[ ! -h "$HOME/.htoprc"       ]] && ln -s $HOME/.dotfiles/htoprc $HOME/.htoprc
+[[ ! -h "$HOME/.gitconfig"    ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
+[[ ! -h "$HOME/.gemrc"        ]] && ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
+[[ ! -h "$HOME/.rbenvrc"      ]] && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
+[[ ! -h "$HOME/.phpenvrc"     ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
+[[ ! -h "$HOME/.tmux.conf"    ]] && ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
+[[ ! -h "$HOME/.vimrc.before" ]] && ln -s $HOME/.dotfiles/vimrc.before $HOME/.vimrc.before
+[[ ! -h "$HOME/.vimrc.after"  ]] && ln -s $HOME/.dotfiles/vimrc.after $HOME/.vimrc.after
 
 # create security soft links to /dev/null
 [[ ! -h "$HOME/.mysql_history"  ]] && ln -s /dev/null $HOME/.mysql_history
@@ -39,10 +39,13 @@ if [[ $OS == "Darwin" ]]; then
   hash tmutil &> /dev/null && sudo tmutil disablelocal # disable local time machine backups
 fi
 
+# install Janus
+curl -Lo- https://bit.ly/janus-bootstrap | bash
+
 # install Vundle
-[[ ! -d "$HOME/.vim/bundle" ]] && mkdir -p $HOME/.vim/bundle
-$GIT clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall +qall
+#[[ ! -d "$HOME/.vim/bundle" ]] && mkdir -p $HOME/.vim/bundle
+#$GIT clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#vim +BundleInstall +qall
 
 # install rbenv and nvm
 if [[ ! -d $HOME/.rbenv ]]; then
