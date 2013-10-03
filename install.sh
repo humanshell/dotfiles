@@ -42,10 +42,9 @@ fi
 # install Janus
 curl -Lo- https://bit.ly/janus-bootstrap | bash
 
-# install Vundle
-#[[ ! -d "$HOME/.vim/bundle" ]] && mkdir -p $HOME/.vim/bundle
-#$GIT clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-#vim +BundleInstall +qall
+# install additional vim plugins
+[[ ! -d $HOME/.janus ]] && mkdir $HOME/.janus
+[[ ! -d $HOME/.janus/vim-autoclose ]] && $GIT clone git@github.com:Townk/vim-autoclose.git $HOME/.janus/vim-autoclose
 
 # install rbenv and nvm
 if [[ ! -d $HOME/.rbenv ]]; then
