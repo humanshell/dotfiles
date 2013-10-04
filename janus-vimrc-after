@@ -2,7 +2,6 @@
 set showcmd
 set cursorline
 set scrolloff=3
-color ir_dark
 
 " status line setup
 set statusline=%f                          " path
