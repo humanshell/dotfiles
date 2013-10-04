@@ -2,6 +2,7 @@
 set showcmd
 set cursorline
 set scrolloff=3
+color ir_dark
 
 " status line setup
 set statusline=%f                          " path
@@ -47,5 +48,7 @@ let NERDTreeChDirMode = 2
 let NERDTreeDirArrows = 0
 
 " When vimrc is edited, automatically reload it
-autocmd! bufwritepost $MYVIMRC source %
-
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
