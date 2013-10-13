@@ -2,6 +2,7 @@
 set showcmd
 set cursorline
 set scrolloff=3
+set hidden
 
 " status line setup
 set statusline=%f                          " path
@@ -37,8 +38,10 @@ nmap <leader>D :bufdo bd<CR>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 
+" ctrl-p setup
+map <leader>p :CtrlP<cr>
+
 " nerdtree setup
-map <leader>p :NERDTreeToggle<cr>
 let NERDTreeShowBookmarks = 0
 let NERDChristmasTree = 1
 let NERDTreeHijackNetrw = 1
@@ -49,5 +52,5 @@ let NERDTreeDirArrows = 0
 " When vimrc is edited, automatically reload it
 augroup reload_vimrc " {
   autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePost % source $MYVIMRC
 augroup END " }
