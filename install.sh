@@ -44,7 +44,7 @@ curl -Lo- https://bit.ly/janus-bootstrap | bash
 
 # install additional vim plugins
 [[ ! -d $HOME/.janus ]] && mkdir $HOME/.janus
-[[ ! -d $HOME/.janus/vim-autoclose ]] && $GIT clone git@github.com:Townk/vim-autoclose.git $HOME/.janus/vim-autoclose
+[[ ! -d $HOME/.janus/vim-autoclose ]] && $GIT clone https://github.com/Townk/vim-autoclose.git $HOME/.janus/vim-autoclose
 
 # install rbenv and nvm
 if [[ ! -d $HOME/.rbenv ]]; then
