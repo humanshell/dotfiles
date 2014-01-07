@@ -34,7 +34,7 @@ color2 gray
 TEXT
 ${font inconsolata:bold:size=12}SYSTEM ${hr 2}
 ${font inconsolata:normal:size=10}
-$sysname $alignr $kernel
+Linux$alignr ARM Exynos5
 Host$alignr$nodename
 Uptime$alignr$uptime
 Address$alignr${addr mlan0}
@@ -66,10 +66,10 @@ ${top_mem name 6}${alignr}${top mem 6}%
 
 ${font inconsolata:bold:size=12}SHORTCUTS ${hr 2}
 ${font inconsolata:normal:size=10}
-Super+space$alignr Main Menu
-Super+r$alignr Spotlight
-Super+t$alignr Terminal
-Super+f$alignr Files
-Super+e$alignr Leafpad
-Super+w$alignr Browser
-Super+q$alignr Force Quit
+alt+space$alignr Main Menu
+alt+r$alignr Spotlight
+alt+t$alignr Terminal
+alt+f$alignr Files
+alt+e$alignr Leafpad
+alt+w$alignr Browser
+alt+q$alignr Force Quit
