@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Dyne</name>
+    <name>Onyx</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -55,52 +55,52 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
+      <name>Inconsolata</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>sans</name>
+      <name>Inconsolata</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
+      <name>Inconsolata Medium</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
+      <name>Inconsolata Medium</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name/>
+      <name>Inconsolata Medium</name>
       <size>8</size>
-      <weight/>
-      <slant/>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>Sans</name>
+      <name>Inconsolata Medium</name>
       <size>8</size>
-      <weight/>
-      <slant/>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
     </font>
   </theme>
   <desktops>
@@ -143,7 +143,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>26</top>
+    <top>0</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -263,16 +263,16 @@
     </keybind>
     <keybind key="A-w">
       <action name="Execute">
-        <command>chromium</command>
+        <command>iceweasel</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Chromium Web Browser</name>
+          <name>Browser</name>
         </startupnotify>
       </action>
     </keybind>
     <keybind key="A-t">
       <action name="Execute">
-        <command>terminator</command>
+        <command>lxterminal</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Terminal</name>
@@ -325,31 +325,6 @@
     </keybind>
     <keybind key="A-S-a">
       <action name="ToggleDecorations"/>
-    </keybind>
-    <keybind key="C-0x44">
-      <action name="Execute">
-        <command>amixer set Master 5%+ unmute</command>
-      </action>
-    </keybind>
-    <keybind key="66">
-      <action name="Execute">
-        <command>amixer set Master 5%- unmute</command>
-      </action>
-    </keybind>
-    <keybind key="67">
-      <action name="Execute">
-        <command>amixer set Master toggle</command>
-      </action>
-    </keybind>
-    <keybind key="XF86ScreenSaver">
-      <action name="Execute">
-        <command>slimlock</command>
-      </action>
-    </keybind>
-    <keybind key="XF86Sleep">
-      <action name="Execute">
-        <command>sudo pm-suspend</command>
-      </action>
     </keybind>
   </keyboard>
   <mouse>
@@ -700,7 +675,7 @@
         <monitor>1</monitor>
       </position>
       <focus>yes</focus>
-      <maximized>no</maximized>
+      <maximized>yes</maximized>
     </application>
     <application name="lxterminal">
       <position>
@@ -710,7 +685,7 @@
       <maximized>yes</maximized>
       <decor>no</decor>
     </application>
-    <application name="chromium">
+    <application name="iceweasel">
       <position>
         <monitor>2</monitor>
       </position>

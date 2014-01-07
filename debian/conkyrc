@@ -37,7 +37,7 @@ ${font inconsolata:normal:size=10}
 $sysname $alignr $kernel
 Host$alignr$nodename
 Uptime$alignr$uptime
-Address$alignr${addr eth0}
+Address$alignr${addr mlan0}
 Gateway$alignr$gw_ip
 
 ${font inconsolata:bold:size=12}HDD $fs_used_perc% ${hr 2}
@@ -69,7 +69,7 @@ ${font inconsolata:normal:size=10}
 Super+space$alignr Main Menu
 Super+r$alignr Spotlight
 Super+t$alignr Terminal
-Super+f$alignr Thunar
+Super+f$alignr Files
 Super+e$alignr Leafpad
-Super+w$alignr Chromium
+Super+w$alignr Browser
 Super+q$alignr Force Quit
