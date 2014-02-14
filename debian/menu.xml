@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu>
+	<menu id="root-menu" label="OpenBox 3">
+		<item label="Files">
+			<action name="Execute">
+				<execute>spacefm</execute>
+			</action>
+		</item>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>lxterminal</execute>
+			</action>
+		</item>
+		<item label="Browser">
+			<action name="Execute">
+				<execute>iceweasel</execute>
+			</action>
+		</item>
+		<separator/>
+    <item label="Settings">
+      <action name="Execute">
+        <execute>obconf</execute>
+      </action>
+    </item>
+		<item label="Reload">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>
