@@ -69,3 +69,7 @@ export PAGER="most"
 
 # Enable tab completion with sudo
 complete -cf sudo
+
+# Enable tab completion with ssh
+[[ -e $HOME/.ssh/config ]] && complete -o 'default' -o 'nospace' -W '$(grep ^Host ~/.ssh/config | grep -v [?*] | cut -d " " -f2)' scp sftp ssh
+
