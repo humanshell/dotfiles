@@ -49,6 +49,11 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeChDirMode = 2
 let NERDTreeDirArrows = 0
 
+" Fold config
+set foldmethod=indent
+set nofoldenable
+hi  Folded ctermfg=white ctermbg=black
+
 " When vimrc is edited, automatically reload it
 augroup reload_vimrc " {
   autocmd!
