@@ -35,6 +35,9 @@ hsetroot -solid "#2E3436" &
 #tint2 \
 #) &
 
+# run the panel
+tint2 &
+
 ## Volume control for systray
 #(sleep 2s && pnmixer) &
 
@@ -48,10 +51,10 @@ hsetroot -solid "#2E3436" &
 #thunar --daemon &
 
 ## Detect and configure touchpad. See 'man synclient' for more info.
-if egrep -iq 'touchpad' /proc/bus/input/devices; then
-    synclient VertEdgeScroll=1 &
-    synclient TapButton1=1 &
-fi
+#if egrep -iq 'touchpad' /proc/bus/input/devices; then
+#    synclient VertEdgeScroll=1 &
+#    synclient TapButton1=1 &
+#fi
 
 ## Start xscreensaver
 #xscreensaver -no-splash &
@@ -78,5 +81,5 @@ xset b off &
 #(sleep 120s && cb-fortune) &
 
 ## Run the conky
-conky -q &
+#conky -q &
 

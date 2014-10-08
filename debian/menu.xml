@@ -8,12 +8,12 @@
 		</item>
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>lxterminal</execute>
+				<execute>terminator</execute>
 			</action>
 		</item>
 		<item label="Browser">
 			<action name="Execute">
-				<execute>iceweasel</execute>
+				<execute>chromium-browser</execute>
 			</action>
 		</item>
 		<separator/>

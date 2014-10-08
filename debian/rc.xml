@@ -263,7 +263,7 @@
     </keybind>
     <keybind key="A-w">
       <action name="Execute">
-        <command>iceweasel</command>
+        <command>chromium-browser</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Browser</name>
@@ -272,7 +272,7 @@
     </keybind>
     <keybind key="A-t">
       <action name="Execute">
-        <command>lxterminal</command>
+        <command>terminator</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Terminal</name>
