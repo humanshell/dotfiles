@@ -40,10 +40,15 @@ Uptime$alignr$uptime
 Address$alignr${addr mlan0}
 Gateway$alignr$gw_ip
 
-${font inconsolata:bold:size=12}HDD $fs_used_perc% ${hr 2}
+${font inconsolata:bold:size=12}eMMC0 $fs_used_perc% ${hr 2}
 ${font inconsolata:normal:size=10}
 $alignr$fs_used/$fs_size
 $fs_bar
+
+${font inconsolata:bold:size=12}eMMC1 ${fs_used_perc /media/sdcard}% ${hr 2}
+${font inconsolata:normal:size=10}
+$alignr${fs_used /media/sdcard}/${fs_size /media/sdcard}
+${fs_bar /dev/sdcard}
 
 ${font inconsolata:bold:size=12}CPU ${cpu cpu0}% ${hr 2}
 ${font inconsolata:normal:size=10}
@@ -55,14 +60,14 @@ ${font inconsolata:normal:size=10}
 $alignr$mem/$memmax
 $membar
 
-${font inconsolata:bold:size=12}PROCESSES $processes ${hr 2}
-${font inconsolata:normal:size=10}
-${top_mem name 1}${alignr}${top mem 1}%
-${top_mem name 2}${alignr}${top mem 2}%
-${top_mem name 3}${alignr}${top mem 3}%
-${top_mem name 4}${alignr}${top mem 4}%
-${top_mem name 5}${alignr}${top mem 5}%
-${top_mem name 6}${alignr}${top mem 6}%
+#${font inconsolata:bold:size=12}PROCESSES $processes ${hr 2}
+#${font inconsolata:normal:size=10}
+#${top_mem name 1}${alignr}${top mem 1}%
+#${top_mem name 2}${alignr}${top mem 2}%
+#${top_mem name 3}${alignr}${top mem 3}%
+#${top_mem name 4}${alignr}${top mem 4}%
+#${top_mem name 5}${alignr}${top mem 5}%
+#${top_mem name 6}${alignr}${top mem 6}%
 
 ${font inconsolata:bold:size=12}SHORTCUTS ${hr 2}
 ${font inconsolata:normal:size=10}
