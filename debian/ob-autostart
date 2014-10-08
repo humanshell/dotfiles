@@ -21,7 +21,8 @@
 #eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
 ## Set root window colour
-hsetroot -solid "#2E3436" &
+#hsetroot -solid "#2E3436" &
+hsetroot -solid "#000000" &
 
 ## Group start:
 ## 1. nitrogen - restores wallpaper
@@ -34,9 +35,6 @@ hsetroot -solid "#2E3436" &
 #sleep 2s && \
 #tint2 \
 #) &
-
-# run the panel
-tint2 &
 
 ## Volume control for systray
 #(sleep 2s && pnmixer) &
@@ -79,6 +77,12 @@ xset b off &
 
 ## cb-fortune - have Waldorf say a little adage
 #(sleep 120s && cb-fortune) &
+
+# run the panel
+tint2 &
+
+# run ownloud
+owncloud &
 
 ## Run the conky
 conky -q &
