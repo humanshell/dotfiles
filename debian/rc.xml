@@ -112,11 +112,10 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>2</number>
+    <number>1</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>Terminal</name>
-      <name>Internet</name>
+      <name>Main</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -675,9 +674,10 @@
         <monitor>1</monitor>
       </position>
       <focus>yes</focus>
-      <maximized>yes</maximized>
+      <maximized>no</maximized>
+      <decor>yes</decor>
     </application>
-    <application name="lxterminal">
+    <application name="terminator">
       <position>
         <monitor>1</monitor>
       </position>
@@ -685,17 +685,17 @@
       <maximized>yes</maximized>
       <decor>no</decor>
     </application>
-    <application name="iceweasel">
+    <application name="chromium-browser">
       <position>
-        <monitor>2</monitor>
+        <monitor>1</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
-      <decor>yes</decor>
+      <decor>no</decor>
     </application>
-    <application name="Mail">
+    <application name="thunderbird">
       <position>
-        <monitor>2</monitor>
+        <monitor>1</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
