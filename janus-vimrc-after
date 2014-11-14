@@ -48,6 +48,7 @@ let NERDTreeHijackNetrw = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeChDirMode = 2
 let NERDTreeDirArrows = 0
+let NERDTreeWinPos = 'right'
 
 " Fold config
 set foldmethod=indent
