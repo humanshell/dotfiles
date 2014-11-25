@@ -22,7 +22,6 @@ fi
 [[ ! -h "$HOME/.gitconfig"    ]] && ln -s $HOME/.dotfiles/gitconfig $HOME/.gitconfig
 [[ ! -h "$HOME/.gemrc"        ]] && ln -s $HOME/.dotfiles/gemrc $HOME/.gemrc
 [[ ! -h "$HOME/.rbenvrc"      ]] && ln -s $HOME/.dotfiles/rbenvrc $HOME/.rbenvrc
-[[ ! -h "$HOME/.phpenvrc"     ]] && ln -s $HOME/.dotfiles/phpenvrc $HOME/.phpenvrc
 [[ ! -h "$HOME/.tmux.conf"    ]] && ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
 [[ ! -h "$HOME/.vimrc.before" ]] && ln -s $HOME/.dotfiles/janus-vimrc-before $HOME/.vimrc.before
 [[ ! -h "$HOME/.vimrc.after"  ]] && ln -s $HOME/.dotfiles/janus-vimrc-after $HOME/.vimrc.after
