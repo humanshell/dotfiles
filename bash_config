@@ -2,15 +2,13 @@
 OS=$(uname)
 
 # setup $PATH
-if [ -z $TMUX ]; then
-  export PATH=/usr/local/bin:$PATH
-  export PATH=/usr/local/sbin:$PATH
-  export PATH=/usr/local/share/npm/bin:$PATH
-  export PATH=/usr/local/share/python:${PATH}
-  export PATH=$PATH:/usr/bin/vendor_perl
-  export PATH=$PATH:$HOME/Dropbox/bin
-  export PATH=$PATH:.
-fi
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/share/python:${PATH}
+export PATH=$PATH:/usr/bin/vendor_perl
+export PATH=$PATH:$HOME/Dropbox/bin
+export PATH=$PATH:.
 
 # setup ruby, php and node version managers
 [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
