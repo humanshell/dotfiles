@@ -38,9 +38,6 @@ if [[ $OS == "Darwin" ]]; then
   hash tmutil &> /dev/null && sudo tmutil disablelocal # disable local time machine backups
 fi
 
-# export SSL cert path on FreeBSD
-[[ $OS == "FreeBSD" ]] && export SSL_CERT_FILE=/usr/local/share/certs/ca-root-nss.crt
-
 # install Janus
 curl -Lo- https://bit.ly/janus-bootstrap | bash
 

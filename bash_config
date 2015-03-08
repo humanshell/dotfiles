@@ -68,6 +68,9 @@ else
   alias la="ls -hla --color=always --group-directories-first"
 fi
 
+# export SSL cert path on FreeBSD
+[[ $OS == "FreeBSD" ]] && export SSL_CERT_FILE=/usr/local/share/certs/ca-root-nss.crt
+
 # This adds color to man pages
 export PAGER="most"
 
