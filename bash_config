@@ -7,6 +7,7 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/usr/local/share/python:${PATH}
 export PATH=$PATH:/usr/bin/vendor_perl
+export PATH=$PATH:/opt/android-studio/bin
 export PATH=$PATH:$HOME/Dropbox/bin
 export PATH=$PATH:.
 
