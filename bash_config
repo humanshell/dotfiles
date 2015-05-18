@@ -50,7 +50,6 @@ alias df="df -h"
 alias du="du -shc"
 alias lll="tree -h"
 alias top="htop"
-alias cp="gcp"
 alias apt="sudo apt-get"
 alias pac="sudo pacman"
 alias pak="sudo packer"
@@ -67,6 +66,7 @@ else
   alias ls="ls -h --color=always --group-directories-first"
   alias ll="ls -hl --color=always --group-directories-first"
   alias la="ls -hla --color=always --group-directories-first"
+  alias cp="gcp"
 fi
 
 # export SSL cert path on FreeBSD
