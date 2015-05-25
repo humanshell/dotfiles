@@ -38,9 +38,6 @@ PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${tx
 . $HOME/.dotfiles/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 
-# setup solarized dircolors
-eval `dircolors ~/.dotfiles/dircolors/dircolors.ansi-dark`
-
 # Aliases to make the CLI a little easier to handle
 alias cs="clear"
 alias cdcs="cd ~ && clear"
@@ -67,6 +64,11 @@ else
   alias ll="ls -hl --color=always --group-directories-first"
   alias la="ls -hla --color=always --group-directories-first"
   alias cp="gcp"
+fi
+
+# setup solarized dircolors
+if [ $OS != "Darwin" ]; then
+  eval `dircolors ~/.dotfiles/dircolors/dircolors.ansi-dark`
 fi
 
 # export SSL cert path on FreeBSD
