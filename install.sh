@@ -45,11 +45,15 @@ curl -Lo- https://bit.ly/janus-bootstrap | bash
 [[ ! -d $HOME/.janus ]] && mkdir $HOME/.janus
 [[ ! -d $HOME/.janus/vim-autoclose ]] && $GIT clone https://github.com/Townk/vim-autoclose.git $HOME/.janus/vim-autoclose
 
-# install rbenv and nvm
+# install rbenv
 if [[ ! -d $HOME/.rbenv ]]; then
   $GIT clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
   mkdir -p $HOME/.rbenv/plugins
   $GIT clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
-  $GIT clone git://github.com/creationix/nvm.git $HOME/.nvm
 fi
+
+# install naveand nodejs
+sudo curl -sL https://raw.githubusercontent.com/isaacs/nave/master/nave.sh -o /usr/local/bin/nave
+sudo chmod +x /usr/local/bin/nave
+sudo nave usemain stable
 
