@@ -1,0 +1,74 @@
+background yes
+use_xft yes
+xftfont inconsolata:size=18
+xftalpha 1
+update_interval 1.0
+update_interval_on_battery 5
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+own_window_colour black
+double_buffer yes
+minimum_size 1 1
+maximum_width 600
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color gray
+default_shade_color 000000
+default_outline_color d9d7d6
+alignment tr
+gap_x 13
+gap_y 50
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+color1 red
+color2 gray
+##############################################
+#  Output
+##############################################
+TEXT
+${font inconsolata:bold:size=21}SYSTEM ${hr 2}
+${font inconsolata:normal:size=13}
+Host$alignr$nodename
+Uptime$alignr$uptime
+Address$alignr${addr wlan0}
+Gateway$alignr$gw_ip
+
+${font inconsolata:bold:size=21}CPU ${cpu cpu0}% ${hr 2}
+${font inconsolata:normal:size=13}
+$alignr${freq_g cpu0} GHz
+${cpubar cpu0}
+
+${font inconsolata:bold:size=21}RAM $memperc% ${hr 2}
+${font inconsolata:normal:size=13}
+$alignr$mem/$memmax
+$membar
+
+${font inconsolata:bold:size=21}HDD $fs_used_perc% ${hr 2}
+${font inconsolata:normal:size=13}
+$alignr$fs_used/$fs_size
+$fs_bar
+
+${font inconsolata:bold:size=21}PROCS $processes ${hr 2}
+${font inconsolata:normal:size=13}
+${top_mem name 1}${alignr}${top mem 1}%
+${top_mem name 2}${alignr}${top mem 2}%
+${top_mem name 3}${alignr}${top mem 3}%
+${top_mem name 4}${alignr}${top mem 4}%
+${top_mem name 5}${alignr}${top mem 5}%
+
+${font inconsolata:bold:size=21}SHORTCUTS ${hr 2}
+${font inconsolata:normal:size=13}
+alt+space$alignr Main Menu
+alt+r$alignr Dmenu
+alt+t$alignr Terminal
+alt+f$alignr Files
+alt+e$alignr Sublime
+alt+w$alignr Browser
+alt+m$alignr VLC
+alt+q$alignr Quit
