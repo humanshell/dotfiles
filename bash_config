@@ -83,6 +83,9 @@ complete -cf sudo
 # add ssh identities for ForwardAgent
 ssh-add > /dev/null 2>&1
 
+# automatically set JAVA_HOME env var
+export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+
 # Enable tab completion with ssh
 [[ -e $HOME/.ssh/config ]] && complete -o 'default' -o 'nospace' -W '$(grep ^Host ~/.ssh/config | grep -v [?*] | cut -d " " -f2)' scp sftp ssh
 
