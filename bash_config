@@ -1,15 +1,17 @@
 # Useful variables
 OS=$(uname)
 
-# setup $PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/share/python:${PATH}
-export PATH=$PATH:/usr/bin/vendor_perl
-export PATH=$PATH:/opt/android-studio/bin
-export PATH=$PATH:$HOME/Dropbox/bin
-export PATH=$PATH:.
+# setup $PATH unless $TMUX is set
+if [[ -z $TMUX ]]; then
+  export PATH=/usr/local/bin:$PATH
+  export PATH=/usr/local/sbin:$PATH
+  export PATH=/usr/local/share/npm/bin:$PATH
+  export PATH=/usr/local/share/python:${PATH}
+  export PATH=$PATH:/usr/bin/vendor_perl
+  export PATH=$PATH:/opt/android-sdk/bin
+  export PATH=$PATH:$HOME/Dropbox/bin
+  export PATH=$PATH:.
+fi
 
 # setup ruby, php and node version managers
 [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
