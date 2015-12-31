@@ -65,7 +65,7 @@ else
   alias ls="ls -h --color=always --group-directories-first"
   alias ll="ls -hl --color=always --group-directories-first"
   alias la="ls -hla --color=always --group-directories-first"
-  alias cp="gcp"
+  #alias cp="gcp"
 fi
 
 # setup solarized dircolors
