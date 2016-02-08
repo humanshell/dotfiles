@@ -8,7 +8,7 @@ set hidden
 set statusline=%f                          " path
 set statusline+=%m%r%h%w                   " flags
 set statusline+=\ %{fugitive#statusline()} " git branch
-set statusline+=\ [line\ %l\/%L\ %p%%]     " line x of y
+set statusline+=\ [line\ %l\/%L\/%c\ %p%%] " line x of y / column
 
 " status line color
 hi StatusLine ctermfg=White ctermbg=Black
@@ -40,6 +40,11 @@ nmap <leader>w :w<CR>
 
 " ctrl-p setup
 map <leader>p :CtrlP<cr>
+
+" syntastic config
+let g:syntastic_c_include_dirs = [ "include", "deps", "build/include" ]
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_auto_refresh_includes = 1
 
 " nerdtree setup
 let NERDTreeShowBookmarks = 0
