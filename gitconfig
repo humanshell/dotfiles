@@ -7,7 +7,7 @@
   branch = auto
   ui = auto
   diff = auto
-  
+
 [core]
   pager = less -R
   editor = vim
@@ -22,3 +22,5 @@
   type = cat-file -t
   dump = cat-file -p
 
+[remote "origin"]
+	prune = true
