@@ -32,38 +32,38 @@ color2 gray
 #  Output
 ##############################################
 TEXT
-${font inconsolata:bold:size=21}SYSTEM ${hr 2}
-${font inconsolata:normal:size=13}
+${font inconsolata:bold:size=12}SYSTEM ${hr 2}
+${font inconsolata:normal:size=11}
 Host$alignr$nodename
 Uptime$alignr$uptime
 Address$alignr${addr wlan0}
 Gateway$alignr$gw_ip
 
-${font inconsolata:bold:size=21}CPU ${cpu cpu0}% ${hr 2}
-${font inconsolata:normal:size=13}
+${font inconsolata:bold:size=12}CPU ${cpu cpu0}% ${hr 2}
+${font inconsolata:normal:size=11}
 $alignr${freq_g cpu0} GHz
 ${cpubar cpu0}
 
-${font inconsolata:bold:size=21}RAM $memperc% ${hr 2}
-${font inconsolata:normal:size=13}
+${font inconsolata:bold:size=12}RAM $memperc% ${hr 2}
+${font inconsolata:normal:size=11}
 $alignr$mem/$memmax
 $membar
 
-${font inconsolata:bold:size=21}HDD $fs_used_perc% ${hr 2}
-${font inconsolata:normal:size=13}
+${font inconsolata:bold:size=12}HDD $fs_used_perc% ${hr 2}
+${font inconsolata:normal:size=11}
 $alignr$fs_used/$fs_size
 $fs_bar
 
-${font inconsolata:bold:size=21}PROCS $processes ${hr 2}
-${font inconsolata:normal:size=13}
+${font inconsolata:bold:size=12}PROCS $processes ${hr 2}
+${font inconsolata:normal:size=11}
 ${top_mem name 1}${alignr}${top mem 1}%
 ${top_mem name 2}${alignr}${top mem 2}%
 ${top_mem name 3}${alignr}${top mem 3}%
 ${top_mem name 4}${alignr}${top mem 4}%
 ${top_mem name 5}${alignr}${top mem 5}%
 
-${font inconsolata:bold:size=21}SHORTCUTS ${hr 2}
-${font inconsolata:normal:size=13}
+${font inconsolata:bold:size=12}SHORTCUTS ${hr 2}
+${font inconsolata:normal:size=11}
 alt+space$alignr Main Menu
 alt+r$alignr Dmenu
 alt+t$alignr Terminal
