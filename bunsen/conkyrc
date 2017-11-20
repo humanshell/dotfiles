@@ -36,7 +36,7 @@ ${font inconsolata:bold:size=12}SYSTEM ${hr 2}
 ${font inconsolata:normal:size=11}
 Host$alignr$nodename
 Uptime$alignr$uptime
-Address$alignr${addr wlan0}
+Address$alignr${addr wlo1}
 Gateway$alignr$gw_ip
 
 ${font inconsolata:bold:size=12}CPU ${cpu cpu0}% ${hr 2}
