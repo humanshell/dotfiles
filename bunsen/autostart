@@ -19,72 +19,50 @@
 ## http://bunsenlabs.org
 ##
 
-## GNOME PolicyKit and Keyring
-eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
-
-## for authentication
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+### SETTINGS START
 
 ## Set root window colour
 hsetroot -solid "#000000" &
 
-## Set the wallpaper
-#nitrogen --restore &
+## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Adjust the values according to your preferances.
+xset r rate 250 25
 
-bl-compositor --start &
+## Turn on/off system beep.
+xset b off
+
+### TOUCHPAD: comment out the next two entries if you don't have one
+
+## Configure touchpad. See 'man synaptics' for more info.
+## Now might be using libinput
+synclient VertEdgeScroll=1 HorizEdgeScroll=1 TapButton1=1 2>/dev/null
+
+## Disable touchpad while typing
+syndaemon -i .5 -K -t -R -d &
+
+### TOUCHPAD END
+
+### SETTINGS END
+
+## GNOME PolicyKit authentication
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+## Compton
+## NOTE: composition must be started before tint2
+bl-compositor --start
 
 ## Start the tint2 session (the default tint2 will run if no sessions have been set)
-(sleep 2s; bl-tint2-session) &
+bl-tint2-session
 
 ## Start the Conky session (the default conkyrc will run if no sessions have been set)
-(sleep 2s; bl-conky-session --autostart) &
-
-## Volume control for systray
-(sleep 2; volti) &
+bl-conky-session --autostart &
 
 ## Volume keys daemon
 xfce4-volumed &
 
-## Start Clipboard manager
-#(sleep 3; clipit) &
-
-## Start Thunar Daemon, if set as bl-file-manager
-if [ "$(readlink -f $(which bl-file-manager))" = "$(which thunar)" ]
-then
-    thunar --daemon &
-fi
-
 ## Enable power management
 xfce4-power-manager &
 
-## Start the battery applet
-(sleep 2; fdpowermon) &
-
-## Start xscreensaver (light-locker now used by default, run via XDG autostart.)
-#xscreensaver -no-splash &
-
-## Detect and configure touchpad. See 'man synclient' for more info.
-if egrep -iq 'touchpad' /proc/bus/input/devices; then
-    synclient VertEdgeScroll=0 &
-    synclient HorizEdgeScroll=0 &
-    synclient HorizTwoFingerScroll=1 &
-    synclient PalmDetect=1 &
-    synclient TapButton1=1 &
-fi
-
-## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
-## Adjust the values according to your preferances.
-xset r rate 250 25 &
-
-## Turn on/off system beep
-xset b off &
-
-## bl-welcome - post-installation script, will not run in a live session and
-## only runs once. Safe to remove.
-#(sleep 10; bl-welcome --firstrun) &
-
-## bl-fortune - have the system come up with a little adage (not yet enabled)
-#(sleep 120; bl-fortune) &
-
 # Autostart the Dropbox daemon
-(sleep 30s; /home/humanshell/bin/dropbox.py start) &
+(sleep 30s; /home/humanshell/Dropbox/bin/dropbox.py start) &
+
