@@ -68,7 +68,7 @@ alt+space$alignr Main Menu
 alt+r$alignr Dmenu
 alt+t$alignr Terminal
 alt+f$alignr Files
-alt+e$alignr Sublime
+alt+e$alignr Editor
 alt+w$alignr Browser
-alt+m$alignr VLC
+alt+m$alignr Media
 alt+q$alignr Quit
