@@ -1,6 +1,21 @@
 # Useful variables
 OS=$(uname)
 
+# This adds color to man pages
+export PAGER="most"
+
+# automatically set JAVA_HOME env var
+if [ $OS == "Darwin" ]; then
+  export JAVA_HOME=$(/usr/libexec/java_home)
+else
+  export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
+fi
+
+# Add Vim as the default editor
+export EDITOR=vim
+export CVSEDITOR=vim
+export SVN_EDITOR=vim
+
 # setup $PATH unless $TMUX is set
 if [[ -z $TMUX ]]; then
   export PATH=/usr/local/opt/postgresql@9.5/bin:$PATH
@@ -17,11 +32,6 @@ fi
 [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
 [[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
 [[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
-
-# Add Vim as the default editor
-export EDITOR=vim
-export CVSEDITOR=vim
-export SVN_EDITOR=vim
 
 # Regular Colors
 txtrst='\e[0m'    # Text Reset
@@ -77,21 +87,11 @@ if [ $OS != "Darwin" ]; then
   eval `dircolors ~/.dotfiles/dircolors/dircolors.ansi-dark`
 fi
 
-# This adds color to man pages
-export PAGER="most"
-
 # Enable tab completion with sudo
 complete -cf sudo
 
 # add ssh identities for ForwardAgent
 ssh-add > /dev/null 2>&1
-
-# automatically set JAVA_HOME env var
-if [ $OS == "Darwin" ]; then
-  export JAVA_HOME=$(/usr/libexec/java_home)
-else
-  export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
-fi
 
 # Enable tab completion with ssh
 [[ -e $HOME/.ssh/config ]] && complete -o 'default' -o 'nospace' -W '$(grep ^Host ~/.ssh/config | grep -v [?*] | cut -d " " -f2)' scp sftp ssh
