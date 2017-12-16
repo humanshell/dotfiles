@@ -11,6 +11,9 @@ else
   export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
 fi
 
+# set golang default workspace
+export GOPATH="$HOME/repos/go"
+
 # Add Vim as the default editor
 export EDITOR=vim
 export CVSEDITOR=vim
@@ -24,6 +27,7 @@ if [[ -z $TMUX ]]; then
   export PATH=/usr/local/share/npm/bin:$PATH
   export PATH=$PATH:/usr/bin/vendor_perl
   export PATH=$PATH:/opt/android-sdk/bin
+  export PATH=$PATH:$HOME/repos/go/bin
   export PATH=$PATH:$HOME/Dropbox/bin
   export PATH=$PATH:.
 fi
