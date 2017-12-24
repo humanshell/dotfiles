@@ -58,7 +58,7 @@ bl-tint2-session
 bl-conky-session --autostart &
 
 ## Volume keys daemon
-xfce4-volumed &
+volumeicon &
 
 ## Enable power management
 xfce4-power-manager &

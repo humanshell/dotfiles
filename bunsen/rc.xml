@@ -118,12 +118,13 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>1</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
+    <popupTime>500</popupTime>
     <names>
-      <name>Main</name>
+      <name>Term</name>
+      <name>Misc</name>
     </names>
-    <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
          desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -153,24 +154,6 @@
     <left>0</left>
     <right>0</right>
   </margins>
-  <dock>
-    <position>TopLeft</position>
-    <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
-    <floatingX>0</floatingX>
-    <floatingY>0</floatingY>
-    <noStrut>no</noStrut>
-    <stacking>Above</stacking>
-    <!-- 'Above', 'Normal', or 'Below' -->
-    <direction>Vertical</direction>
-    <!-- 'Vertical' or 'Horizontal' -->
-    <autoHide>no</autoHide>
-    <hideDelay>300</hideDelay>
-    <!-- in milliseconds (1000 = 1 second) -->
-    <showDelay>300</showDelay>
-    <!-- in milliseconds (1000 = 1 second) -->
-    <moveButton>Middle</moveButton>
-    <!-- 'Left', 'Middle', 'Right' -->
-  </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <keybind key="XF86PowerOff">
@@ -204,17 +187,12 @@
     </keybind>
     <keybind key="A-r">
       <action name="Execute">
-        <command>dmenu_run</command>
         <startupnotify>
-          <enabled>yes</enabled>
-          <name>dmenu</name>
+          <enabled>false</enabled>
+          <name>dmenu-bind</name>
         </startupnotify>
+        <command>~/.config/dmenu/dmenu-bind.sh</command>
       </action>
-    </keybind>
-    <keybind key="A-Escape">
-      <action name="Lower"/>
-      <action name="FocusToBottom"/>
-      <action name="Unfocus"/>
     </keybind>
     <keybind key="A-space">
       <action name="ShowMenu">
@@ -224,29 +202,39 @@
     <keybind key="A-Tab">
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <allDesktops>yes</allDesktops>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
     <keybind key="A-f">
       <action name="Execute">
         <command>bl-file-manager</command>
         <startupnotify>
-          <enabled>yes</enabled>
+          <enabled>false</enabled>
           <name>Files</name>
         </startupnotify>
       </action>
     </keybind>
     <keybind key="A-w">
       <action name="Execute">
-        <command>google-chrome</command>
         <startupnotify>
-          <enabled>yes</enabled>
+          <enabled>true</enabled>
           <name>Browser</name>
         </startupnotify>
+        <command>x-www-browser</command>
       </action>
     </keybind>
     <keybind key="A-t">
@@ -260,34 +248,20 @@
     </keybind>
     <keybind key="A-e">
       <action name="Execute">
-        <command>subl</command>
         <startupnotify>
-          <enabled>yes</enabled>
-          <name>sublime</name>
+          <enabled>false</enabled>
+          <name>Editor</name>
         </startupnotify>
+        <command>bl-text-editor</command>
       </action>
     </keybind>
     <keybind key="A-m">
       <action name="Execute">
-        <command>vlc</command>
         <startupnotify>
-          <enabled>yes</enabled>
-          <name>VLC</name>
+          <enabled>false</enabled>
+          <name>Mediaplayer</name>
         </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="A-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Volume</name>
-        </startupnotify>
-        <command>pavucontrol</command>
-      </action>
-    </keybind>
-    <keybind key="A-space">
-      <action name="ShowMenu">
-        <menu>root-menu</menu>
+        <command>bl-media-player</command>
       </action>
     </keybind>
     <keybind key="A-a">
@@ -296,30 +270,18 @@
     <keybind key="A-S-a">
       <action name="ToggleDecorations"/>
     </keybind>
-    <keybind key="Print">
-      <action name="Execute">
-        <command>xfce4-screenshooter</command>
+    <keybind key="C-A-Left">
+      <action name="SendToDesktop">
+        <to>left</to>
       </action>
     </keybind>
-    <keybind key="A-Print">
-      <action name="Execute">
-        <command>scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/ ; bl-image-viewer ~/Pictures/screenshots/$f'</command>
+    <keybind key="C-A-Right">
+      <action name="SendToDesktop">
+        <to>right</to>
       </action>
     </keybind>
     <!-- A bit of tiling -->
-    <keybind key="W-Right">
-      <action name="GrowToEdgeEast"/>
-    </keybind>
     <keybind key="W-Left">
-      <action name="GrowToEdgeWest"/>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="GrowToEdgeSouth"/>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="GrowToEdgeNorth"/>
-    </keybind>
-    <keybind key="W-A-Left">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -328,7 +290,7 @@
         <y>0</y>
       </action>
     </keybind>
-    <keybind key="W-A-Right">
+    <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
@@ -737,10 +699,10 @@
   <applications>
     <application class="*">
       <position>
-        <monitor>1</monitor>
+        <monitor>2</monitor>
       </position>
       <focus>yes</focus>
-      <maximized>no</maximized>
+      <maximized>yes</maximized>
       <decor>yes</decor>
     </application>
     <application name="x-terminal-emulator">
@@ -751,13 +713,29 @@
       <maximized>yes</maximized>
       <decor>no</decor>
     </application>
-    <application name="google-chrome">
+    <application name="bl-media-player">
       <position>
-        <monitor>1</monitor>
+        <monitor>2</monitor>
+      </position>
+      <focus>yes</focus>
+      <maximized>no</maximized>
+      <decor>yes</decor>
+    </application>
+    <application name="bl-text-editor">
+      <position>
+        <monitor>2</monitor>
       </position>
       <focus>yes</focus>
       <maximized>yes</maximized>
       <decor>no</decor>
+    </application>
+    <application name="x-www-broswer">
+      <position>
+        <monitor>2</monitor>
+      </position>
+      <focus>yes</focus>
+      <maximized>yes</maximized>
+      <decor>yes</decor>
     </application>
     <!--
     # this is an example with comments through out. use these to make your
