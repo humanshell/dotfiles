@@ -1,6 +1,8 @@
 # Useful variables
 OS=$(uname)
 
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # This adds color to man pages
 export PAGER="most"
 
@@ -24,8 +26,9 @@ if [[ -z $TMUX ]]; then
   export PATH=/usr/local/share/npm/bin:$PATH
   export PATH=$PATH:/usr/bin/vendor_perl
   export PATH=$PATH:/opt/android-sdk/bin
-  export PATH=$PATH:$HOME/Dropbox/bin
   export PATH=$PATH:$HOME/iCloud/bin
+  export PATH=$PATH:/Users/dom/OneDrive\ -\ Little\ Star\ Media\ Inc/bin
+  export PATH=$PATH:$HOME/.ara/bin
   export PATH=$PATH:.
 fi
 
