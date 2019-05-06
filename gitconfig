@@ -15,6 +15,12 @@
   # autocrlf = input
   # safecrlf = true
 
+[branch]
+  autosetuprebase = always
+
+[pull]
+  rebase = true
+
 [alias]
   co = checkout
   ci = commit
