@@ -51,9 +51,3 @@ if [[ ! -d $HOME/.rbenv ]]; then
   mkdir -p $HOME/.rbenv/plugins
   $GIT clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
 fi
-
-# install naveand nodejs
-sudo curl -sL https://raw.githubusercontent.com/isaacs/nave/master/nave.sh -o /usr/local/bin/nave
-sudo chmod +x /usr/local/bin/nave
-sudo nave usemain stable
-
