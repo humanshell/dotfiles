@@ -2,16 +2,10 @@
 OS=$(uname)
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # This adds color to man pages
 export PAGER="most"
-
-# automatically set JAVA_HOME env var
-if [ $OS == "Darwin" ]; then
-  export JAVA_HOME=$(/usr/libexec/java_home)
-else
-  export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which javac))))
-fi
 
 # Add Vim as the default editor
 export EDITOR=vim
@@ -20,22 +14,17 @@ export SVN_EDITOR=vim
 
 # setup $PATH unless $TMUX is set
 if [[ -z $TMUX ]]; then
-  export PATH=/usr/local/opt/postgresql@9.5/bin:$PATH
   export PATH=/usr/local/bin:$PATH
   export PATH=/usr/local/sbin:$PATH
   export PATH=/usr/local/share/npm/bin:$PATH
+  export PATH=/opt/homebrew/bin:$PATH
   export PATH=$PATH:/usr/bin/vendor_perl
-  export PATH=$PATH:/opt/android-sdk/bin
-  export PATH=$PATH:$HOME/iCloud/bin
-  export PATH=$PATH:/Users/dom/OneDrive\ -\ Little\ Star\ Media\ Inc/bin
-  export PATH=$PATH:$HOME/.ara/bin
+  export PATH=$PATH:$HOME/Documents/bin
   export PATH=$PATH:.
 fi
 
-# setup ruby, php and node version managers
+# setup ruby version managers
 [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
-[[ -d $HOME/.phpenv ]] && source $HOME/.phpenvrc
-[[ -d $HOME/.nvm ]] && source $HOME/.nvm/nvm.sh
 
 # Regular Colors
 txtrst='\e[0m'    # Text Reset
@@ -51,8 +40,8 @@ White='\e[0;37m'  # White
 PS1="\n${Yellow}[${txtrst} \h-${Green}\u${txtrst} \w\$(__git_ps1) ${Yellow}]${txtrst}\n $ "
 
 # Enable use of git in the shell environment/prompt
-. /usr/local/etc/bash_completion.d/git-completion.bash
-. /usr/local/etc/bash_completion.d/git-prompt.sh
+. /opt/homebrew/etc/bash_completion.d/git-completion.bash
+. /opt/homebrew/etc/bash_completion.d/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # Enable use of pass
