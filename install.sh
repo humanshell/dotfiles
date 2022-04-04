@@ -47,7 +47,7 @@ curl -Lo- https://bit.ly/janus-bootstrap | bash
 
 # install rbenv
 if [[ ! -d $HOME/.rbenv ]]; then
-  $GIT clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
+  $GIT clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
   mkdir -p $HOME/.rbenv/plugins
-  $GIT clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+  $GIT clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
 fi
