@@ -23,8 +23,13 @@ if [[ -z $TMUX ]]; then
   export PATH=$PATH:.
 fi
 
-# setup ruby version managers
+# setup ruby version manager
 [[ -d $HOME/.rbenv ]] && source $HOME/.rbenvrc
+
+# setup node version manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Regular Colors
 txtrst='\e[0m'    # Text Reset
@@ -84,4 +89,3 @@ ssh-add > /dev/null 2>&1
 
 # Enable tab completion with ssh
 [[ -e $HOME/.ssh/config ]] && complete -o 'default' -o 'nospace' -W '$(grep ^Host ~/.ssh/config | grep -v [?*] | cut -d " " -f2)' scp sftp ssh
-
