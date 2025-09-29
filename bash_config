@@ -7,10 +7,10 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # This adds color to man pages
 export PAGER="most"
 
-# Add Vim as the default editor
-export EDITOR=vim
-export CVSEDITOR=vim
-export SVN_EDITOR=vim
+# Add Nvim as the default editor
+export EDITOR=nvim
+export CVSEDITOR=nvim
+export SVN_EDITOR=nvim
 
 # setup $PATH unless $TMUX is set
 if [[ -z $TMUX ]]; then
